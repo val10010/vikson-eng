@@ -21,7 +21,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          ACCESS_TOKEN: ${{ secrets.vikson-eng-gh-pages-2 }}
+          ACCESS_TOKEN: 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
           BRANCH: gh-pages
           FOLDER: build
           CLEAN: true
