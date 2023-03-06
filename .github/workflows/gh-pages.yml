@@ -18,10 +18,5 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v4
-        with:
-          ACCESS_TOKEN: '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'
-          BRANCH: gh-pages
-          FOLDER: build
-          CLEAN: true
+      - name: Deploy
+        run: npm run deploy
