@@ -17,7 +17,7 @@ const Home = () => {
 
                 <div className="container">
                     <div className="content"></div>
-                    {/*<Image src='../../images/hero_main.png' alt="hero" className="hero"/>*/}
+                    <Image src='../../images/hero_main.png' alt="hero" className="hero"/>
 
                 </div>
             </header>
