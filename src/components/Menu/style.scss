@@ -1,0 +1,35 @@
+.menu {
+  padding: 20px 0;
+  font-family: var(--secondary-text-font);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--main-text-color);
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #BEBEBE;
+
+
+  &__logo {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+    font-family: var(--main-text-font);
+    text-align: left;
+  }
+
+  &__phoneNumber {
+    color: var(--main-text-color);
+    text-align: right;
+  }
+
+  &__item {
+    color: var(--main-text-color);
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

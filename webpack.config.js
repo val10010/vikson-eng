@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 
@@ -15,6 +16,12 @@ module.exports = {
         output: {
             path: path.join(__dirname, "/build"),
             filename: "script.min.js?[hash]",
+        },
+        resolve: {
+            alias: {
+                Components: path.resolve(__dirname, 'src/components'),
+            },
+            extensions: [".js"]
         },
         module: {
             rules: [
@@ -37,11 +44,15 @@ module.exports = {
                     use: 'raw-loader'
                 },
                 {
-                    test: /\.(woff|woff2|eot|ttf|otf)$/,
-                    loader: 'file-loader',
-                    options: {
-                        name: 'fonts/[name].[ext]'
-                    }
+                    test: /\.(png|jpe?g|gif)$/i,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                name: 'images/[name].[ext]'
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -52,6 +63,26 @@ module.exports = {
             }),
             new MiniCssExtractPlugin({
                 filename: 'style.min.css?[contenthash]',
-            })
+            }),
+            new CopyPlugin({
+                patterns: [
+                    "robots.txt",
+                    { from: 'src/images', to: 'images' }
+                ],
+            }),
+            new ImageminWebpWebpackPlugin({
+                config: [
+                    {
+                        test: /\.(jpe?g|png)/,
+                        options: {
+                            quality: 90,
+                        },
+                    },
+                ],
+                overrideExtension: true,
+                detailedLogs: false,
+                silent: false,
+                strict: true,
+            }),
         ]
 };

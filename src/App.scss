@@ -1,8 +1,19 @@
 @import "~reset-css";
+@import "styles/common";
 
 body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #263238;
+  font-family: var(--main-text-font);
+  background: var(--main-bg-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
 }
 
