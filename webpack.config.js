@@ -31,17 +31,33 @@ module.exports = {
                     use: ["babel-loader"]
                 },
                 {
-                    test: /\.scss$/,
+                    test: /\.(scss|css)$/,
+                    exclude: /node_modules/,
                     use: [
                         {
                             loader: MiniCssExtractPlugin.loader,
                         },
-                        "css-loader", "sass-loader"
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                modules: {
+                                    localIdentName: '[folder]__[local]--[hash:base64:3]'
+                                }
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                postcssOptions: {
+                                    ident: 'postcss',
+                                    plugins: [
+                                        require('autoprefixer')()
+                                    ]
+                                }
+                            }
+                        },
+                        "sass-loader"
                     ]
-                },
-                {
-                    test: /\.svg$/i,
-                    use: 'raw-loader'
                 },
                 {
                     test: /\.(png|jpe?g|gif)$/i,

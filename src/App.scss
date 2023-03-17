@@ -2,15 +2,8 @@
 @import "styles/common";
 
 body {
-  font-family: var(--main-text-font);
-  background: var(--main-bg-color);
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
+  font-family: var(--primary-text-font);
+  background: var(--primary-bg-color);
 }
 
 a {

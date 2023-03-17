@@ -1,0 +1,46 @@
+.header {
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content {
+    margin-right: 36px;
+
+    .title {
+      font-family: var(--primary-text-font);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 73px;
+      text-transform: uppercase;
+      color: var(--primary-text-color);
+      margin-bottom: 20px;
+    }
+
+    .desc {
+      font-family: var(--secondary-text-font);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: var(--secondary-text-color);
+    }
+
+    .button {
+      height: 50px;
+      width: 266px;
+      margin-top: 50px;
+    }
+  }
+
+  .hero {
+    padding: 100px 0 170px;
+    height: 376px;
+  }
+}

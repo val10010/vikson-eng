@@ -1,0 +1,47 @@
+.content {
+  width: 100%;
+  border-bottom: 1px solid var(--primary-border-color);
+  border-top: 1px solid var(--primary-border-color);
+  padding: 15px 0;
+
+  .title {
+    font-family: var(--secondary-text-font);
+    color: var(--primary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      content: '';
+      background-image: url('../../images/arrow.svg');
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 10px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .open {
+    &:after {
+      transform: translate(0, -50%) rotate(180deg);
+    }
+  }
+
+  .inner {
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    padding: 30px 0 25px;
+  }
+
+  .open {
+
+  }
+}

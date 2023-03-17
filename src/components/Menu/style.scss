@@ -1,31 +1,35 @@
 .menu {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
   padding: 20px 0;
   font-family: var(--secondary-text-font);
   font-weight: 400;
   font-size: 16px;
-  color: var(--main-text-color);
+  color: var(--primary-text-color);
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #BEBEBE;
+  border-bottom: 1px solid var(--primary-border-color);
 
 
-  &__logo {
+  .logo {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     text-transform: uppercase;
-    color: var(--main-text-color);
-    font-family: var(--main-text-font);
+    color: var(--primary-text-color);
+    font-family: var(--primary-text-font);
     text-align: left;
   }
 
-  &__phoneNumber {
-    color: var(--main-text-color);
+  .phoneNumber {
+    color: var(--primary-text-color);
     text-align: right;
   }
 
-  &__item {
-    color: var(--main-text-color);
+  .item {
+    color: var(--primary-text-color);
     margin-right: 40px;
 
     &:last-child {
