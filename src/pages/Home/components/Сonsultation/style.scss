@@ -47,6 +47,15 @@
   }
 }
 
+.form {
+  margin-top: 80px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .highlightedText {
   color: var(--highlighted-text-color);
 }

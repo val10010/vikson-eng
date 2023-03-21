@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <header className={style.header}>
             <Menu>
-                <Link to='#'>Викладачам</Link>
+                <Link to='/for-teachers'>Викладачам</Link>
                 <Link to='#'>Вакансії</Link>
             </Menu>
 

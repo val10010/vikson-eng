@@ -1,0 +1,29 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-form-bg-color);
+  border: 1px solid var(--primary-border-color);
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 2.80667px 2.80667px 5.61333px rgba(0, 0, 0, 0.25);
+  padding: 40px;
+
+  .title {
+    font-family: var(--secondary-text-font);
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 140%;
+    color: var(--primary-text-color);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .input {
+    margin-bottom: 20px;
+  }
+
+  .button {
+    margin-top: 30px;
+  }
+}

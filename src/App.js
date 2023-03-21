@@ -1,6 +1,7 @@
 import React from 'react';
-import { useRoutes } from 'react-router-dom';
 import routes from './routes';
+import Footer from 'Components/Footer';
+import { useRoutes } from 'react-router-dom';
 
 import './App.scss';
 
@@ -13,6 +14,7 @@ const App =  () => {
     return (
        <>
            { content }
+            <Footer/>
        </>
     );
 };

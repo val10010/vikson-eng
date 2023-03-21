@@ -1,0 +1,60 @@
+.footer {
+  width: 100%;
+  background: var(--primary-footer-bg-color);
+  padding: 37px 0 193px;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    color: var(--primary-text-color);
+  }
+
+  .item {
+    display: block;
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+  }
+
+  .contacts {
+
+    .title {
+      font-family: var(--secondary-text-font);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: var(--secondary-text-color);
+      margin-bottom: 20px;
+    }
+
+    .socialMedia {
+      display: flex;
+
+      .instagram {
+        background: url('../../images/i.svg');
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+      }
+
+      .telegram {
+        background: url('../../images/t.svg');
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
