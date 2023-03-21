@@ -12,7 +12,6 @@ const Header = () => {
                 <Link to='#'>Вакансії</Link>
             </Menu>
 
-
         </header>
     );
 };
