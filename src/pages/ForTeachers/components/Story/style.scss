@@ -1,0 +1,56 @@
+.teacherstory{
+  margin: 200px 0 0 0;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .storyRow{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .story{
+        width: 760px;
+        font-family: var(--secondary-text-font);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: var(--secondary-text-color);
+
+        .title{
+          font-family: var(--primary-text-font);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 60px;
+          line-height: 73px;
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+          color: var(--primary-text-color);
+          margin: 0 0 30px 0;
+        }
+
+        .description{
+          font-family: var(--secondary-text-font);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 140%;
+          color: var(--secondary-text-color);
+        }
+
+      }
+
+      .mainsecond{
+        width: 360px;
+        height: 360px;
+      }
+    }
+  }
+}

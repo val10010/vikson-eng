@@ -1,0 +1,108 @@
+.blunksbg{
+  background: var(--secondary-bg-color);
+  height: 340px;
+  margin:100px 0;
+
+  .container{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .blunksRow{
+      display: flex;
+      justify-content: space-between;
+
+      .cards{
+        display: flex;
+        flex-direction: column;
+        margin: -100px 0 0 0;
+        background: var(--primary-cart-bg-color);
+        max-width: 360px;
+        height: 560px;
+        border: 1px solid #616161;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding: 30px;
+
+        .number{
+          font-family: var(--primary-text-font);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 24px;
+          color: var(--highlighted-text-color);
+        }
+
+        .changecolor{
+          color: var(--highlighted-text-color);
+          display: inline-block;
+          margin: 5px 0;
+        }
+
+        .title{
+          flex: 0 1 30%;
+          font-family: var(--primary-text-font);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 30px;
+          line-height: 140%;
+        }
+
+        .level{
+          font-family: var(--secondary-text-font);
+          font-style: normal;
+          color: var(--secondary-text-color);
+          font-weight: 400;
+          margin: 10px 0;
+          font-size: 16px;
+        }
+
+        .description{
+          font-family: var(--secondary-text-font);
+          color: var(--secondary-text-color);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          flex: 1 1 auto;
+        }
+
+        .pricerow{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          .price{
+            font-family: var(--secondary-text-font);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: var(--secondary-text-color);
+
+            .weight{
+              display: inline-block;
+              color: var(--primary-text-color);
+              font-weight: 700;
+            }
+          }
+
+          .button{
+            font-font: var(--secondary-text-font);
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: var(--primary-btn-text-color);
+            padding: 15px 40px;
+            background: var(--secondary-bg-color);
+            border-radius: 30px;
+            margin: 20px 0 0 0;
+          }
+
+        }
+      }
+    }
+  }
+}
