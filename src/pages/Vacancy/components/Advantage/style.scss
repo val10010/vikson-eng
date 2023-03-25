@@ -1,0 +1,80 @@
+.advantage{
+  margin: 170px 0 0 0;
+
+  .container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .title{
+      width:778px;
+      font-family: var(--primary-text-font);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 73px;
+      text-transform: uppercase;
+      color: var(--highlighted-text-color);
+    }
+
+    .ourGifts{
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      margin: 50px 0 0 0;
+
+      .giftText{
+        margin: 20px 0 0 0;
+        flex: 0 1 30%;
+        font-family: var(--primary-text-font);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: var(--primary-text-color);
+      }
+
+      .list{
+        flex: 0 1 70%;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+
+        .element{
+          width: 500px;
+          flex: 0 1 45%;
+          margin: 20px;
+          display: flex;
+
+          .play{
+            margin: 0 5px;
+          }
+
+          .elementDescription{
+
+            .elementTitle{
+              margin: 0 0 10px 0;
+              font-family: var(--primary-text-font);
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 24px;
+              display: flex;
+              align-items: center;
+              color: var(--primary-text-color);
+            }
+
+            .elementText{
+              font-family: var(--secondary-text-font);
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 140%;
+              color: var(--secondary-text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@ const Header = () => {
         <header className={style.header}>
             <Menu>
                 <Link to='/'>Головна</Link>
-                <Link to='#'>Вакансії</Link>
+                <Link to='/vacancy'>Вакансії</Link>
             </Menu>
 
             <div className={style.container}>
@@ -46,7 +46,6 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            
         </header>
     );
 };
