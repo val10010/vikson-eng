@@ -1,0 +1,64 @@
+.container {
+  background: var(--primary-cart-bg-color);
+  padding: 30px 30px 50px 30px;
+  width: 100%;
+  height: 500px;
+  max-width: 360px;
+  border: 1px solid #616161;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  .number {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5259FF;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    height: 74px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #5259FF;
+  }
+
+  .desc {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--primary-text-color);
+  }
+
+  .details {
+    cursor: pointer;
+    color: #5259FF;
+    font-family: var(--primary-text-font);
+    text-decoration: underline;
+    text-align: center;
+    margin-top: auto;
+  }
+}
+
+.individual {
+  background-color: var(--individual-cart-bg-color);
+}
+
+.group {
+  background-color: var(--group-cart-bg-color);
+}

@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 440px;
+
+  .title {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 73px;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+    margin-bottom: 50px;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 780px;
+    margin-left: auto;
+
+    .desc {
+      padding: 30px;
+    }
+  }
+}
+
+.highlightedText {
+  color: var(--highlighted-text-color);
+  margin-right: 15px;
+}

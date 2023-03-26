@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Image = ({ src, ...props }) => {
+    if(!src) return;
+
     const pathWithoutExtension = src.replace(/\.[^/.]+$/, '');
     const extension = src.substring(src.lastIndexOf('.') + 1);
 

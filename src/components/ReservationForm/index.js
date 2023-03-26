@@ -13,13 +13,17 @@ const ReservationForm = ({ className }) => {
             <TextInput placeholder="Призвище Ім’я*" className={style.input} />
             <TextInput placeholder="Телефон*" className={style.input} />
             <Textarea placeholder="Ціль навчання*" />
+            <Button className={style.button} disabled={true}>
+                записатись
+            </Button>
             <Checkbox>
                 даю згоду на обробку своїх персональних даних.
                 Підтверджую, що ознайомлений з Політикою обробки персональних даних
             </Checkbox>
-            <Button className={style.button} disabled={true}>
-                записатись
-            </Button>
+            <div className={style.total}>
+                <span>Усього:</span>
+                <span className={style.price}>250 грн. / 7$</span>
+            </div>
         </form>
     );
 };
