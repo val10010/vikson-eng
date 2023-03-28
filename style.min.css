@@ -1,39 +1,818 @@
-/*!*************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Menu/style.scss ***!
-  \*************************************************************************************************************************/
-.menu {
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/Toggle/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+.Toggle__content--qBd {
+  width: 100%;
+  border-top: 1px solid var(--primary-border-color);
+  padding: 15px 0; }
+  .Toggle__content--qBd:last-child {
+    border-bottom: 1px solid var(--primary-border-color); }
+  .Toggle__content--qBd .Toggle__title--CPw {
+    font-family: var(--secondary-text-font);
+    color: var(--primary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    cursor: pointer;
+    position: relative; }
+    .Toggle__content--qBd .Toggle__title--CPw:after {
+      content: '';
+      background-image: url(6adf3c2980707e41ecf5.svg);
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 10px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%); }
+  .Toggle__content--qBd .Toggle__open--gn1:after {
+    transform: translate(0, -50%) rotate(180deg); }
+  .Toggle__content--qBd .Toggle__inner--wTz {
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    padding: 30px 0 25px; }
+
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/FAQ/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+.FAQ__container--BF7 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 440px; }
+  .FAQ__container--BF7 .FAQ__title--VWh {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 73px;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+    margin-bottom: 50px; }
+  .FAQ__container--BF7 .FAQ__wrapper--v7c {
+    width: 100%;
+    max-width: 780px;
+    margin-left: auto; }
+    .FAQ__container--BF7 .FAQ__wrapper--v7c .FAQ__desc--mLu {
+      padding: 30px; }
+
+.FAQ__highlightedText--IlQ {
+  color: var(--highlighted-text-color);
+  margin-right: 15px; }
+
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/TariffPlan/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+.TariffPlan__container--_i0 {
+  background: var(--primary-cart-bg-color);
+  padding: 30px 30px 50px 30px;
+  width: 100%;
+  height: 500px;
+  max-width: 360px;
+  border: 1px solid #616161;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; }
+  .TariffPlan__container--_i0 .TariffPlan__number--TZx {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5259FF;
+    margin-bottom: 40px; }
+  .TariffPlan__container--_i0 .TariffPlan__title--v7d {
+    height: 74px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    margin-bottom: 20px; }
+  .TariffPlan__container--_i0 .TariffPlan__subtitle--TnX {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #5259FF; }
+  .TariffPlan__container--_i0 .TariffPlan__desc--Rh_ {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--primary-text-color); }
+  .TariffPlan__container--_i0 .TariffPlan__details--A2o {
+    cursor: pointer;
+    color: #5259FF;
+    font-family: var(--primary-text-font);
+    text-decoration: underline;
+    text-align: center;
+    margin-top: auto; }
+
+.TariffPlan__individual--ZaO {
+  background-color: var(--individual-cart-bg-color); }
+
+.TariffPlan__group--xNn {
+  background-color: var(--group-cart-bg-color); }
+
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/Plans/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.Plans__container--hOA {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 100px; }
+  .Plans__container--hOA .Plans__plansWrapper--pFJ {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto 100px; }
+  .Plans__container--hOA .Plans__title--tyG {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 73px;
+    text-transform: uppercase;
+    color: var(--primary-text-color); }
+
+.Plans__forChildren--vLc {
+  position: relative;
+  padding-top: 50px;
+  margin-bottom: 170px; }
+  .Plans__forChildren--vLc .Plans__wrapper--wdG {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+  .Plans__forChildren--vLc:before {
+    content: '';
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--primary-cart-bg-color);
+    z-index: -1; }
+  .Plans__forChildren--vLc .Plans__desc--UbI {
+    width: 100%;
+    max-width: 360px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--secondary-text-color);
+    font-family: var(--secondary-text-font); }
+    .Plans__forChildren--vLc .Plans__desc--UbI .Plans__caption--U3X {
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 48px;
+      font-family: var(--primary-text-font);
+      color: var(--primary-text-color);
+      margin-bottom: 30px; }
+
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/Menu/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************/
+.Menu__menu--i3w {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
   padding: 20px 0;
   font-family: var(--secondary-text-font);
   font-weight: 400;
   font-size: 16px;
-  color: var(--main-text-color);
+  color: var(--primary-text-color);
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #BEBEBE; }
-  .menu__logo {
+  border-bottom: 1px solid var(--primary-border-color); }
+  .Menu__menu--i3w .Menu__logo--Plh {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     text-transform: uppercase;
-    color: var(--main-text-color);
-    font-family: var(--main-text-font);
+    color: var(--primary-text-color);
+    font-family: var(--primary-text-font);
     text-align: left; }
-  .menu__phoneNumber {
-    color: var(--main-text-color);
+  .Menu__menu--i3w .Menu__phoneNumber--_UD {
+    color: var(--primary-text-color);
     text-align: right; }
-  .menu__item {
-    color: var(--main-text-color);
+  .Menu__menu--i3w .Menu__item--_wu {
+    color: var(--primary-text-color);
     margin-right: 40px; }
-    .menu__item:last-child {
+    .Menu__menu--i3w .Menu__item--_wu:last-child {
       margin-right: 0; }
 
-/*!********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/style.scss ***!
-  \********************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/Button/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+.Button__button--cuW {
+  width: 100%;
+  height: 50px;
+  background: var(--primary-button-bg-color);
+  color: var(--primary-btn-text-color);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 300px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: var(--primary-text-font); }
+  .Button__button--cuW:hover {
+    background: transparent;
+    color: var(--secondary-btn-text-color);
+    border: 1px solid var(--secondary-btn-text-color); }
 
-/*!*******************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.scss ***!
-  \*******************************************************************************************************/
+.Button__primary--qTy {
+  background: var(--primary-button-bg-color);
+  color: var(--primary-btn-text-color); }
+  .Button__primary--qTy:hover {
+    background: transparent;
+    color: var(--secondary-btn-text-color);
+    border: 1px solid var(--secondary-btn-text-color);
+    transition: background .3s; }
+
+.Button__secondary--C8L {
+  background: transparent;
+  border: 1px solid var(--secondary-btn-text-color);
+  color: var(--secondary-btn-text-color); }
+  .Button__secondary--C8L:hover {
+    opacity: 0.7;
+    transition: background .3s; }
+
+.Button__disabled--vKA {
+  opacity: 0.3;
+  pointer-events: none; }
+
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/Header/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+.Header__header--xaE .Header__container--HfZ {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.Header__header--xaE .Header__content--Wbb {
+  margin-right: 36px; }
+  .Header__header--xaE .Header__content--Wbb .Header__title--ymZ {
+    font-family: var(--primary-text-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 73px;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+    margin-bottom: 20px; }
+  .Header__header--xaE .Header__content--Wbb .Header__desc--lQC {
+    font-family: var(--secondary-text-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--secondary-text-color); }
+  .Header__header--xaE .Header__content--Wbb .Header__button--zRY {
+    height: 50px;
+    width: 266px;
+    margin-top: 50px; }
+
+.Header__header--xaE .Header__hero--QQ2 {
+  padding: 100px 0 170px;
+  height: 376px; }
+
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/Slider/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+.Slider__wrapper--IMD {
+  position: relative; }
+
+.Slider__buttons--aal {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .Slider__buttons--aal .Slider__prevButton--qew {
+    background: url(9dbc03c4f3bb867793e7.svg);
+    width: 70px;
+    height: 70px;
+    border: none;
+    cursor: pointer; }
+    .Slider__buttons--aal .Slider__prevButton--qew[disabled] {
+      pointer-events: none;
+      opacity: 0.3;
+      cursor: default; }
+    .Slider__buttons--aal .Slider__prevButton--qew:hover {
+      background: url(79edd24b30bb9f7d9e15.svg); }
+  .Slider__buttons--aal .Slider__nextButton--S3t {
+    background: url(9dbc03c4f3bb867793e7.svg);
+    width: 70px;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+    transform: rotate(180deg); }
+    .Slider__buttons--aal .Slider__nextButton--S3t[disabled] {
+      pointer-events: none;
+      opacity: 0.3;
+      cursor: default; }
+    .Slider__buttons--aal .Slider__nextButton--S3t:hover {
+      background: url(79edd24b30bb9f7d9e15.svg); }
+
+.Slider__content--skQ {
+  margin: 0 100px;
+  background: #FFFFFF;
+  border: 1px solid #BEBEBE;
+  box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  padding: 40px 50px;
+  font-family: var(--secondary-text-font);
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%; }
+
+.Slider__author--oWk {
+  display: flex;
+  align-items: center;
+  margin: 40px 0 0 100px; }
+  .Slider__author--oWk .Slider__data--uxc {
+    margin-left: 30px; }
+    .Slider__author--oWk .Slider__data--uxc .Slider__name--wm_ {
+      font-family: var(--primary-text-font);
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 140%;
+      color: #5259FF;
+      margin-bottom: 10px; }
+    .Slider__author--oWk .Slider__data--uxc .Slider__link--mv1 {
+      font-family: var(--secondary-text-font);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: #616161; }
+
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/Reviews/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+.Reviews__container--KHS {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 170px; }
+  .Reviews__container--KHS .Reviews__title--tCa {
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 73px;
+    text-transform: uppercase;
+    margin-bottom: 100px; }
+
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/StickyBox/style.scss ***!
+  \********************************************************************************************************************************************************************************************************************************/
+.StickyBox__container--VUi {
+  border-bottom: 1px solid var(--primary-border-color);
+  border-top: 1px solid var(--primary-border-color);
+  display: flex;
+  align-items: flex-start; }
+  .StickyBox__container--VUi .StickyBox__items--joZ {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    left: 0;
+    width: 50%;
+    margin-top: 40px; }
+    .StickyBox__container--VUi .StickyBox__items--joZ .StickyBox__item--B88 {
+      font-family: var(--primary-text-font);
+      color: var(--secondary-text-color);
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 140%;
+      cursor: pointer; }
+      .StickyBox__container--VUi .StickyBox__items--joZ .StickyBox__item--B88:last-child {
+        margin-bottom: 0; }
+    .StickyBox__container--VUi .StickyBox__items--joZ .StickyBox__active--Gas {
+      color: var(--primary-text-color);
+      border-bottom: 1px solid var(--primary-border-color); }
+  .StickyBox__container--VUi .StickyBox__content--qzf {
+    width: 50%; }
+
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/NumberedList/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+.NumberedList__items--jOT {
+  counter-reset: item;
+  margin-left: 20px; }
+  .NumberedList__items--jOT .NumberedList__item--RkZ {
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    text-indent: -20px;
+    margin-bottom: 20px; }
+    .NumberedList__items--jOT .NumberedList__item--RkZ:before {
+      content: counter(item) ". ";
+      counter-increment: item;
+      color: var(--highlighted-text-color); }
+    .NumberedList__items--jOT .NumberedList__item--RkZ:last-child {
+      margin-bottom: 0; }
+
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/Learning/components/StepFirst/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+.StepFirst__container--Kc2 {
+  border-left: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid var(--primary-border-color);
+  padding: 40px 40px 120px 40px; }
+  .StepFirst__container--Kc2 .StepFirst__title--s9Z {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    margin-bottom: 30px; }
+
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/Learning/components/StepThird/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+.StepThird__container--X7a {
+  border-left: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid var(--primary-border-color);
+  padding: 40px; }
+  .StepThird__container--X7a .StepThird__title--G6O {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    margin-bottom: 30px; }
+  .StepThird__container--X7a .StepThird__image--kTP {
+    border-radius: 30px; }
+
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/Learning/components/StepSecond/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+.StepSecond__container--Q8U {
+  border-left: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid var(--primary-border-color);
+  padding: 40px 40px 154px 40px; }
+  .StepSecond__container--Q8U .StepSecond__button--bP9 {
+    max-width: 340px;
+    height: 40px;
+    margin-top: 40px; }
+
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/Learning/components/StepFourth/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+.StepFourth__container--aYQ {
+  border-left: 1px solid var(--primary-border-color);
+  padding: 40px 40px 150px 40px; }
+  .StepFourth__container--aYQ .StepFourth__title--rEX {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    margin-bottom: 30px; }
+  .StepFourth__container--aYQ .StepFourth__item--TNQ {
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    margin-bottom: 30px; }
+    .StepFourth__container--aYQ .StepFourth__item--TNQ:last-child {
+      margin-bottom: 0; }
+
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/Learning/style.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+.Learning__container--TZm {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+  .Learning__container--TZm .Learning__title--crb {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 73px;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+    margin-bottom: 30px; }
+
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/Instagram/style.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+.Instagram__container--Jmn {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 200px;
+  text-align: center; }
+  .Instagram__container--Jmn .Instagram__title--BZj {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 73px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #5259FF;
+    margin-bottom: 20px; }
+  .Instagram__container--Jmn .Instagram__subtitle--i7z {
+    font-family: var(--primary-text-font);
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 50px; }
+  .Instagram__container--Jmn .Instagram__wrapper--WPS {
+    display: flex;
+    justify-content: space-between; }
+
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/AboutSpeaker/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+.AboutSpeaker__container--xC9 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.AboutSpeaker__content--AsG {
+  width: 100%;
+  max-width: 700px; }
+  .AboutSpeaker__content--AsG .AboutSpeaker__title--Hqc {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 73px;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+    margin-bottom: 20px; }
+  .AboutSpeaker__content--AsG .AboutSpeaker__desc--Xya {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--secondary-text-color);
+    margin-bottom: 100px; }
+  .AboutSpeaker__content--AsG .AboutSpeaker__facts--gUA {
+    width: 100%;
+    max-width: 420px; }
+    .AboutSpeaker__content--AsG .AboutSpeaker__facts--gUA .AboutSpeaker__fact--w7C {
+      position: relative;
+      font-family: var(--secondary-text-font);
+      color: var(--secondary-text-color);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      padding: 14px 60px 14px 0;
+      border-bottom: 1px solid var(--primary-border-color); }
+      .AboutSpeaker__content--AsG .AboutSpeaker__facts--gUA .AboutSpeaker__fact--w7C:first-child {
+        border-top: 1px solid var(--primary-border-color); }
+      .AboutSpeaker__content--AsG .AboutSpeaker__facts--gUA .AboutSpeaker__fact--w7C::after {
+        content: '';
+        background: url(234f08ae6c48ce3294c7.svg);
+        width: 30px;
+        height: 34px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%); }
+
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/TextInput/style.scss ***!
+  \********************************************************************************************************************************************************************************************************************************/
+.TextInput__input--fga {
+  padding: 10px 20px;
+  border: 1px solid var(--primary-border-color);
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  font-family: var(--secondary-text-font); }
+  .TextInput__input--fga::placeholder {
+    color: var(--primary-placeholder-color); }
+  .TextInput__input--fga:active, .TextInput__input--fga:focus {
+    border: 1px solid var(--primary-border-color);
+    outline: none; }
+
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/Textarea/style.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+.Textarea__textarea--lxr {
+  padding: 20px;
+  border: 1px solid var(--primary-border-color);
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  font-family: var(--secondary-text-font);
+  height: 80px;
+  resize: none; }
+  .Textarea__textarea--lxr::placeholder {
+    color: var(--primary-placeholder-color); }
+  .Textarea__textarea--lxr:active, .Textarea__textarea--lxr:focus {
+    border: 1px solid var(--primary-border-color);
+    outline: none; }
+
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/Checkbox/style.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+.Checkbox__label--pqO {
+  font-family: var(--secondary-text-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .Checkbox__label--pqO .Checkbox__wrapper--kFP {
+    display: inline-block;
+    position: relative;
+    margin-right: 22px; }
+    .Checkbox__label--pqO .Checkbox__wrapper--kFP input {
+      width: 28px;
+      height: 26px;
+      margin: 0;
+      position: relative;
+      top: 2px;
+      left: 2px; }
+      .Checkbox__label--pqO .Checkbox__wrapper--kFP input:checked {
+        top: 1px;
+        left: 1px; }
+      .Checkbox__label--pqO .Checkbox__wrapper--kFP input:checked ~ .Checkbox__checkbox--qFJ {
+        background: url(656490c4ee64bf55f392.svg);
+        border: none; }
+    .Checkbox__label--pqO .Checkbox__wrapper--kFP .Checkbox__checkbox--qFJ {
+      display: block;
+      width: 30px;
+      height: 28px;
+      background: #fff;
+      border-radius: 5px;
+      border: 1px solid var(--primary-border-color);
+      position: absolute;
+      top: 0; }
+
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/ReservationForm/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+.ReservationForm__form--Ld2 {
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-form-bg-color);
+  border: 1px solid var(--primary-border-color);
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 2.80667px 2.80667px 5.61333px rgba(0, 0, 0, 0.25);
+  padding: 40px; }
+  .ReservationForm__form--Ld2 .ReservationForm__title--Tuh {
+    font-family: var(--secondary-text-font);
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 140%;
+    color: var(--primary-text-color);
+    text-align: center;
+    margin-bottom: 30px; }
+  .ReservationForm__form--Ld2 .ReservationForm__input--AG3 {
+    margin-bottom: 20px; }
+  .ReservationForm__form--Ld2 .ReservationForm__button--uNP {
+    margin: 30px 0; }
+  .ReservationForm__form--Ld2 .ReservationForm__total--poM {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    margin-top: 30px; }
+    .ReservationForm__form--Ld2 .ReservationForm__total--poM .ReservationForm__price--tG0 {
+      font-weight: 500;
+      color: var(--primary-text-color); }
+
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/components/Сonsultation/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+.Сonsultation__container--XX9 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 170px; }
+
+.Сonsultation__title--Sjp {
+  font-family: var(--primary-text-font);
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 73px;
+  text-transform: uppercase;
+  color: var(--primary-text-font);
+  text-align: left; }
+
+.Сonsultation__content--KE1 {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 70px; }
+  .Сonsultation__content--KE1 .Сonsultation__subtitle--tQ1 {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    margin-bottom: 20px; }
+  .Сonsultation__content--KE1 .Сonsultation__benefits--FMh {
+    list-style-image: url(e43f70ac191d5422fcd9.svg);
+    padding-left: 20px;
+    margin-bottom: 30px; }
+    .Сonsultation__content--KE1 .Сonsultation__benefits--FMh .Сonsultation__benefit--VXv {
+      padding-bottom: 10px;
+      font-family: var(--secondary-text-font);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: var(--secondary-text-color); }
+      .Сonsultation__content--KE1 .Сonsultation__benefits--FMh .Сonsultation__benefit--VXv:last-child {
+        padding-bottom: 0; }
+
+.Сonsultation__form--PeW {
+  margin-top: 80px; }
+
+.Сonsultation__wrapper--Lrb {
+  display: flex;
+  justify-content: space-between; }
+
+.Сonsultation__highlightedText--V0y {
+  color: var(--highlighted-text-color); }
+
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/ForTeachers/components/Header/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
+.Header__header--ted .Header__container--xut {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/Footer/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+.Footer__footer--yn6 {
+  width: 100%;
+  background: var(--primary-footer-bg-color);
+  padding: 37px 0 193px; }
+  .Footer__footer--yn6 .Footer__container--DFT {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+  .Footer__footer--yn6 .Footer__logo--zoT {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    color: var(--primary-text-color); }
+  .Footer__footer--yn6 .Footer__item--Zvl {
+    display: block;
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px; }
+  .Footer__footer--yn6 .Footer__contacts--Yrk .Footer__title--UjE {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px; }
+  .Footer__footer--yn6 .Footer__contacts--Yrk .Footer__socialMedia--fNn {
+    display: flex; }
+    .Footer__footer--yn6 .Footer__contacts--Yrk .Footer__socialMedia--fNn .Footer__instagram--TnG {
+      background: url(a56446cab5e01d7688b8.svg);
+      width: 30px;
+      height: 30px;
+      margin-right: 20px; }
+    .Footer__footer--yn6 .Footer__contacts--Yrk .Footer__socialMedia--fNn .Footer__telegram--sIC {
+      background: url(68835cc3fd60e971f842.svg);
+      width: 30px;
+      height: 30px; }
+
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/App.scss ***!
+  \*********************************************************************************************************************************************************************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/
    v5.0.1 | 20191019
    License: none (public domain)
@@ -98,33 +877,33 @@ table {
   src: url(24d6be6c502d39fb3ce1.ttf) format("ttf"); }
 
 :root {
-  --main-bg-color: #F8FFE9;
+  --primary-bg-color: #F8FFE9;
   --secondary-bg-color: #5259FF;
-  --footer-bg-color: #EEF3E2;
-  --main-cart-bg-color: #ffffff;
+  --primary-footer-bg-color: #EEF3E2;
+  --primary-cart-bg-color: #ffffff;
   --individual-cart-bg-color: #FFE1FE;
   --group-cart-bg-color: #CBF9FF;
   --secondary-carts-bg-color: #ffffff;
-  --main-button-bg-color: #5259FF;
-  --main-button-hover-bg-color: #ffffff; }
+  --primary-button-bg-color: #5259FF;
+  --primary-form-bg-color: #ffffff;
+  --primary-button-hover-bg-color: #ffffff;
+  --primary-border-color: #BEBEBE; }
 
 :root {
-  --main-text-color: #222222;
-  --secondary-text-color: #616161; }
+  --primary-text-color: #222222;
+  --secondary-text-color: #616161;
+  --primary-btn-text-color: #ffffff;
+  --secondary-btn-text-color: #5259FF;
+  --highlighted-text-color: #5259FF;
+  --primary-placeholder-color: #BEBEBE; }
 
 :root {
-  --main-text-font: 'Inter', 'Arial', sans-serif;
-  --secondary-text-font: 'Inter', 'Arial', sans-serif; }
+  --primary-text-font: 'Inter', 'Arial', sans-serif;
+  --secondary-text-font: 'Roboto', 'Arial', sans-serif; }
 
 body {
-  font-family: var(--main-text-font);
-  background: var(--main-bg-color); }
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex; }
+  font-family: var(--primary-text-font);
+  background: var(--primary-bg-color); }
 
 a {
   text-decoration: none; }
