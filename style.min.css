@@ -399,7 +399,8 @@
         margin-bottom: 0; }
     .StickyBox__container--VUi .StickyBox__items--joZ .StickyBox__active--Gas {
       color: var(--primary-text-color);
-      border-bottom: 1px solid var(--primary-border-color); }
+      border-bottom: 1px solid var(--primary-border-color);
+      transition: color .5s ease; }
   .StickyBox__container--VUi .StickyBox__content--qzf {
     width: 50%; }
 
