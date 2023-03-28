@@ -1,4 +1,40 @@
 .container {
+  border-bottom: 1px solid var(--primary-border-color);
+  border-top: 1px solid var(--primary-border-color);
   display: flex;
+  align-items: flex-start;
 
+
+  .items {
+    position: sticky;
+    top: 20px;
+    left: 0;
+    width: 50%;
+    margin-top: 40px;
+
+    .item {
+      font-family: var(--primary-text-font);
+      color: var(--secondary-text-color);
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 140%;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .active {
+      color: var(--primary-text-color);
+      border-bottom: 1px solid var(--primary-border-color);
+      transition: color .5s ease;
+    }
+  }
+
+  .content {
+    width: 50%;
+  }
 }

@@ -1,0 +1,18 @@
+.container {
+  border-left: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid var(--primary-border-color);
+  padding: 40px;
+
+  .title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    margin-bottom: 30px;
+  }
+
+  .image {
+    border-radius: 30px;
+  }
+}

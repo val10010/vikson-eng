@@ -1,60 +1,82 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { cloneElement, useEffect, useState, useRef, Children } from 'react';
 
 import style from './style.scss';
 
-const StickyBox = (props) => {
-    const [selectedItemIndex, setSelectedItemIndex] = useState(0);
-    const items = props.items;
-    const description = items[selectedItemIndex].description;
-    const descriptionRef = useRef(null);
-
-    // Обработчик события скролла правого блока
-    function handleScroll() {
-        const scrollTop = descriptionRef.current.scrollTop;
-        let index = 0;
-        let sum = 0;
-        // Определяем, какой элемент сейчас отображается в верхней части блока
-        for (let i = 0; i < items.length; i++) {
-            sum += items[i].height;
-            if (sum > scrollTop) {
-                index = i;
-                break;
-            }
-        }
-        setSelectedItemIndex(index);
-    }
+const StickyBox = ({ children, menuItems }) => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const contentRefs = useRef([]);
 
     useEffect(() => {
-        // Устанавливаем высоту каждого элемента
-        const descriptionElements = descriptionRef.current.children;
-        for (let i = 0; i < descriptionElements.length; i++) {
-            items[i].height = descriptionElements[i].offsetHeight;
+        const handleScroll = () => {
+            const index = contentRefs.current.reduce((closestIndex, ref, idx) => {
+                const rect = ref.getBoundingClientRect();
+                const prevRect = contentRefs.current[idx - 1]?.getBoundingClientRect();
+
+                if (idx === 0) {
+                    return rect.bottom - 20 <= window.innerHeight ? idx : -1;
+                } else if (prevRect && prevRect.bottom - 20 <= 0 && rect.bottom - 20 > 0) {
+                    return idx;
+                } else {
+                    return closestIndex;
+                }
+            }, -1);
+
+            if (index !== activeIndex) {
+                setActiveIndex(index);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [activeIndex]);
+
+    useEffect(() => {
+        const hash = window.location.hash.substring(1);
+        const index = menuItems.findIndex((item) => item.hash === hash);
+
+        if (index !== -1) {
+            setActiveIndex(index);
+            contentRefs.current[index].scrollIntoView({ behavior: 'smooth' });
         }
-    }, [items]);
+    }, [menuItems]);
+
+    const handleMenuItemClick = (index) => {
+        setActiveIndex(index);
+        contentRefs.current[index].scrollIntoView({ behavior: 'smooth' });
+        window.location.hash = `#${menuItems[index].hash}`;
+    };
 
     return (
         <div className={style.container}>
-            <div style={{ flex: "0 0 200px", position: "sticky", top: 0 }}>
-                {items.map((item, index) => (
-                    <div
-                        key={index}
-                        style={{
-                            padding: "10px",
-                            backgroundColor:
-                                selectedItemIndex === index ? "#eee" : "transparent",
-                        }}
-                    >
-                        {item.name}
-                    </div>
-                ))}
-            </div>
-            <div
-                style={{ flex: 1, overflowY: "scroll", height: "300px" }}
-                onScroll={handleScroll}
-                ref={descriptionRef}
-            >
-                {description}
-            </div>
+            <ul className={style.items}>
+                {
+                    menuItems.map(({item}, index) => (
+                        <li
+                            key={item}
+                            onClick={() => handleMenuItemClick(index)}
+                            className={`${style.item} ${index === activeIndex ? style.active : ''}`}
+                        >
+                            { item }
+                        </li>
+                    ))
+                }
+            </ul>
+
+            {
+                cloneElement(children, {
+                    className: ` ${style.content || ''} ${children?.props?.className || ''}`,
+                    children: Children.map(children.props.children, (child, index) => (
+                        <div
+                            key={index}
+                            ref={(element) => (contentRefs.current[index] = element)}
+                        >
+                            { child }
+                        </div>
+                    ))
+                })
+            }
         </div>
     );
 };

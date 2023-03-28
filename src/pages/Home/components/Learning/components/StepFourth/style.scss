@@ -1,0 +1,26 @@
+.container {
+  border-left: 1px solid var(--primary-border-color);
+  padding: 40px 40px 150px 40px;
+
+  .title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    margin-bottom: 30px;
+  }
+
+  .item {
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

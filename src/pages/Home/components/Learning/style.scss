@@ -2,7 +2,6 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  position: sticky;
 
   .title {
     font-family: var(--primary-text-font);
@@ -11,19 +10,6 @@
     line-height: 73px;
     text-transform: uppercase;
     color: var(--primary-text-color);
-  }
-
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-    height: 500px;
-
-    .items {
-      height: 100vh;
-    }
-
-    .content {
-      width: 600px;
-    }
+    margin-bottom: 30px;
   }
 }

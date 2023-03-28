@@ -7,19 +7,19 @@ import style from './style.scss';
 
 const Instagram = () => {
     return (
-        <div className={style.container}>
+        <section className={style.container}>
             <Link to='https://instagram.com/vikson.eng' className={style.title} target="_blank">@vikson.eng</Link>
             <p className={style.subtitle}>підписуйся на мене в instagram</p>
             <div className={style.wrapper}>
                 {
                     POSTS.map(item => (
-                        <Link to={item.link} target="_blank">
-                            <Image src={item.imagePath} />
+                        <Link key={item.link} to={item.link} target="_blank">
+                            <Image  src={item.imagePath}  alt={item.link} />
                         </Link>
                     ))
                 }
             </div>
-        </div>
+        </section>
     );
 };
 

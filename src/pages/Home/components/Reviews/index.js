@@ -7,10 +7,10 @@ import style from './style.scss';
 
 const Reviews = () => {
     return (
-        <div className={style.container}>
+        <section className={style.container}>
             <h4 className={style.title}>ВІДГУКИ</h4>
             <Slider reviews={REVIEWS} />
-        </div>
+        </section>
     );
 };
 

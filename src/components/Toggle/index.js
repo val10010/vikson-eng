@@ -14,12 +14,12 @@ const Toggle = ({ className, children }) => {
                     if (i === 0) {
                         return cloneElement(child, {
                                 onClick: () => setOpen(!isOpen),
-                                className: `${ isOpen ? style.open : ''} ${style.title || ''} ${child.props.className || ''}`
+                                className: `${ isOpen ? style.open : ''} ${style.title || ''} ${child?.props?.className || ''}`
                             }
                         );
                     }
                     return isOpen && cloneElement(child, {
-                            className: `${style.inner} ${child.props.className || ''}`
+                            className: `${style.inner} ${child?.props?.className || ''}`
                         }
                     );
                 })

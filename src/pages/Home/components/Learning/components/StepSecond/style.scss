@@ -1,0 +1,11 @@
+.container {
+  border-left: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid var(--primary-border-color);
+  padding: 40px 40px 154px 40px;
+
+  .button {
+    max-width: 340px;
+    height: 40px;
+    margin-top: 40px;
+  }
+}
