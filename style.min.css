@@ -516,6 +516,7 @@
   \*********************************************************************************************************************************************************************************************************************************************************/
 .Burger__label--ecx {
   width: 24px;
+  height: 12px;
   display: block;
   position: relative; }
   .Burger__label--ecx input {
@@ -524,10 +525,10 @@
       transform: rotate(45deg);
       height: 0; }
       .Burger__label--ecx input:checked ~ .Burger__line--xpY:after {
-        top: 0;
+        top: 6px;
         transform: rotate(90deg); }
       .Burger__label--ecx input:checked ~ .Burger__line--xpY:before {
-        top: 0;
+        top: 6px;
         transform: rotate(0); }
   .Burger__label--ecx .Burger__line--xpY {
     display: block;
@@ -535,7 +536,7 @@
     width: 100%;
     height: 2px;
     background-color: #222222;
-    transition-duration: .25s; }
+    transition-duration: .1s; }
     .Burger__label--ecx .Burger__line--xpY:after, .Burger__label--ecx .Burger__line--xpY:before {
       content: '';
       display: block;
@@ -545,9 +546,9 @@
       background-color: #222222;
       transition-duration: .25s; }
     .Burger__label--ecx .Burger__line--xpY:before {
-      top: -6px; }
-    .Burger__label--ecx .Burger__line--xpY:after {
       top: 6px; }
+    .Burger__label--ecx .Burger__line--xpY:after {
+      top: 12px; }
 
 /*!*************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/components/Menu/components/Mobile/style.scss ***!
