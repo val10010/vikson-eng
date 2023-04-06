@@ -310,19 +310,37 @@
     line-height: 61px;
     margin-bottom: 40px;
     text-align: center; }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .PlanDetails__container--i2S .PlanDetails__title--CAt {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 30px; } }
+    @media (max-width: 767px) {
+      .PlanDetails__container--i2S .PlanDetails__title--CAt {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 20px; } }
   .PlanDetails__container--i2S .PlanDetails__content--CzG {
     border-top: 1px solid var(--primary-border-color);
     border-bottom: 1px solid var(--primary-border-color);
     display: flex;
     justify-content: center; }
+    @media (max-width: 767px) {
+      .PlanDetails__container--i2S .PlanDetails__content--CzG {
+        flex-wrap: wrap; } }
     .PlanDetails__container--i2S .PlanDetails__content--CzG .PlanDetails__block--Q8L {
       padding: 40px;
-      width: 50%; }
+      width: 50%;
+      min-width: 300px; }
       @media (max-width: 767px) {
         .PlanDetails__container--i2S .PlanDetails__content--CzG .PlanDetails__block--Q8L {
           padding: 30px; } }
       .PlanDetails__container--i2S .PlanDetails__content--CzG .PlanDetails__block--Q8L:last-child:not(:only-child) {
         border-left: 1px solid var(--primary-border-color); }
+        @media (max-width: 767px) {
+          .PlanDetails__container--i2S .PlanDetails__content--CzG .PlanDetails__block--Q8L:last-child:not(:only-child) {
+            border-left: none;
+            border-top: 1px solid var(--primary-border-color); } }
       .PlanDetails__container--i2S .PlanDetails__content--CzG .PlanDetails__block--Q8L .PlanDetails__subtitle--qW0 {
         font-family: var(--primary-text-font);
         color: var(--primary-text-color);
@@ -331,6 +349,12 @@
         line-height: 140%;
         text-align: center;
         margin-bottom: 34px; }
+        @media (min-width: 768px) and (max-width: 1199px) {
+          .PlanDetails__container--i2S .PlanDetails__content--CzG .PlanDetails__block--Q8L .PlanDetails__subtitle--qW0 {
+            font-size: 22px; } }
+        @media (max-width: 767px) {
+          .PlanDetails__container--i2S .PlanDetails__content--CzG .PlanDetails__block--Q8L .PlanDetails__subtitle--qW0 {
+            font-size: 18px; } }
       .PlanDetails__container--i2S .PlanDetails__content--CzG .PlanDetails__block--Q8L .PlanDetails__list--Hxy .PlanDetails__item--Srs {
         font-family: var(--secondary-text-font);
         color: var(--secondary-text-color);
@@ -1349,73 +1373,135 @@
 /*!************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/components/TextInput/style.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************/
-.TextInput__input--fga {
-  padding: 10px 20px;
-  border: 1px solid var(--primary-border-color);
-  border-radius: 10px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  font-family: var(--secondary-text-font); }
-  .TextInput__input--fga::placeholder {
-    color: var(--primary-placeholder-color); }
-  .TextInput__input--fga:active, .TextInput__input--fga:focus {
+.TextInput__wrapper--uGL {
+  width: 100%;
+  position: relative; }
+  .TextInput__wrapper--uGL .TextInput__input--fga {
+    padding: 10px 20px;
     border: 1px solid var(--primary-border-color);
-    outline: none; }
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    width: 100%;
+    font-family: var(--secondary-text-font); }
+    .TextInput__wrapper--uGL .TextInput__input--fga::placeholder {
+      color: var(--primary-placeholder-color); }
+    .TextInput__wrapper--uGL .TextInput__input--fga:active, .TextInput__wrapper--uGL .TextInput__input--fga:focus {
+      border: 1px solid var(--primary-border-color);
+      outline: none; }
+  .TextInput__wrapper--uGL.TextInput__error--tlr {
+    position: relative; }
+    .TextInput__wrapper--uGL.TextInput__error--tlr:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: url(daf76f37f6a8b2a2a2c9.svg); }
+    .TextInput__wrapper--uGL.TextInput__error--tlr .TextInput__input--fga {
+      border-color: var(--error-border-color); }
+  .TextInput__wrapper--uGL.TextInput__valid--Fcn {
+    position: relative; }
+    .TextInput__wrapper--uGL.TextInput__valid--Fcn:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: url(e5f48ee8f6400da50e94.svg); }
+  .TextInput__wrapper--uGL .TextInput__errorMessage--zaV {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    position: absolute;
+    top: -19px;
+    left: 0;
+    color: var(--error-text-color); }
 
 /*!***********************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/components/Textarea/style.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************************/
-.Textarea__textarea--lxr {
-  padding: 20px;
-  border: 1px solid var(--primary-border-color);
-  border-radius: 10px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  font-family: var(--secondary-text-font);
-  height: 80px;
-  resize: none; }
-  .Textarea__textarea--lxr::placeholder {
-    color: var(--primary-placeholder-color); }
-  .Textarea__textarea--lxr:active, .Textarea__textarea--lxr:focus {
+.Textarea__wrapper--H0d {
+  width: 100%; }
+  .Textarea__wrapper--H0d .Textarea__textarea--lxr {
+    width: 100%;
+    padding: 20px;
     border: 1px solid var(--primary-border-color);
-    outline: none; }
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    font-family: var(--secondary-text-font);
+    height: 80px;
+    resize: none; }
+    .Textarea__wrapper--H0d .Textarea__textarea--lxr::placeholder {
+      color: var(--primary-placeholder-color); }
+    .Textarea__wrapper--H0d .Textarea__textarea--lxr:active, .Textarea__wrapper--H0d .Textarea__textarea--lxr:focus {
+      border: 1px solid var(--primary-border-color);
+      outline: none; }
+  .Textarea__wrapper--H0d.Textarea__error--NTS {
+    position: relative; }
+    .Textarea__wrapper--H0d.Textarea__error--NTS:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: url(daf76f37f6a8b2a2a2c9.svg); }
+    .Textarea__wrapper--H0d.Textarea__error--NTS .Textarea__textarea--lxr {
+      border-color: var(--error-border-color); }
+  .Textarea__wrapper--H0d.Textarea__valid--ZuI {
+    position: relative; }
+    .Textarea__wrapper--H0d.Textarea__valid--ZuI:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: url(e5f48ee8f6400da50e94.svg); }
+  .Textarea__wrapper--H0d .Textarea__errorMessage--V8C {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    position: absolute;
+    top: -19px;
+    left: 0;
+    color: var(--error-text-color); }
 
 /*!***********************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/components/Checkbox/style.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************************/
-.Checkbox__label--pqO {
-  font-family: var(--secondary-text-font);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
-  color: var(--secondary-text-color);
-  cursor: pointer;
+.Checkbox__container--eJj {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; }
-  .Checkbox__label--pqO .Checkbox__wrapper--kFP {
+  align-items: flex-start;
+  position: relative; }
+  .Checkbox__container--eJj .Checkbox__wrapper--kFP {
     display: inline-block;
     position: relative;
     margin-right: 22px; }
-    .Checkbox__label--pqO .Checkbox__wrapper--kFP input {
-      width: 28px;
-      height: 26px;
+    .Checkbox__container--eJj .Checkbox__wrapper--kFP input {
+      width: 30px;
+      height: 28px;
       margin: 0;
       position: relative;
-      top: 2px;
-      left: 2px; }
-      @media (max-width: 767px) {
-        .Checkbox__label--pqO .Checkbox__wrapper--kFP input {
-          opacity: 0; } }
-      .Checkbox__label--pqO .Checkbox__wrapper--kFP input:checked {
-        top: 1px;
-        left: 1px; }
-      .Checkbox__label--pqO .Checkbox__wrapper--kFP input:checked ~ .Checkbox__checkbox--qFJ {
+      opacity: 0;
+      cursor: pointer; }
+      .Checkbox__container--eJj .Checkbox__wrapper--kFP input:checked ~ .Checkbox__checkbox--qFJ {
         background: url(bfb5b07519ca253c6a00.svg) no-repeat;
         border: none; }
-    .Checkbox__label--pqO .Checkbox__wrapper--kFP .Checkbox__checkbox--qFJ {
+    .Checkbox__container--eJj .Checkbox__wrapper--kFP .Checkbox__checkbox--qFJ {
       display: block;
       width: 30px;
       height: 28px;
@@ -1423,11 +1509,28 @@
       border-radius: 5px;
       border: 1px solid var(--primary-border-color);
       position: absolute;
-      top: 0; }
+      top: 2px;
+      pointer-events: none; }
       @media (max-width: 767px) {
-        .Checkbox__label--pqO .Checkbox__wrapper--kFP .Checkbox__checkbox--qFJ {
+        .Checkbox__container--eJj .Checkbox__wrapper--kFP .Checkbox__checkbox--qFJ {
           width: 24px;
           height: 24px; } }
+  .Checkbox__container--eJj .Checkbox__label--pqO {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--secondary-text-color);
+    cursor: pointer; }
+  .Checkbox__container--eJj .Checkbox__errorMessage--y3x {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: var(--error-text-color); }
 
 /*!******************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/components/ReservationForm/style.scss ***!
@@ -1739,7 +1842,8 @@ table {
   --primary-button-bg-color: #5259FF;
   --primary-form-bg-color: #ffffff;
   --primary-button-hover-bg-color: #ffffff;
-  --primary-border-color: #BEBEBE; }
+  --primary-border-color: #BEBEBE;
+  --error-border-color: #FF6060; }
 
 :root {
   --primary-text-color: #222222;
@@ -1748,7 +1852,8 @@ table {
   --secondary-btn-text-color: #5259FF;
   --highlighted-text-color: #5259FF;
   --primary-placeholder-color: #BEBEBE;
-  --mobile-menu-box-text-color: #fff; }
+  --mobile-menu-box-text-color: #fff;
+  --error-text-color: #FF6060; }
 
 :root {
   --primary-text-font: 'Inter', 'Arial', sans-serif;
