@@ -1,15 +1,25 @@
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 170px;
+  @include container;
+  margin-bottom: 170px;
+
+  @include tablet {
+    margin-bottom: 170px;
+  }
+
+  @include mobile {
+    margin-bottom: 100px;
+  }
 
   .title {
     font-family: var(--primary-text-font);
     color: var(--primary-text-color);
     font-weight: 400;
-    font-size: 60px;
-    line-height: 73px;
     text-transform: uppercase;
     margin-bottom: 100px;
+    @include title;
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
   }
 }

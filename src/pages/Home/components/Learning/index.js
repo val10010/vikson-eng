@@ -14,7 +14,7 @@ const Learning = () => {
         <section className={style.container}>
             <h4 className={style.title}>ПРОЦЕС НАВЧАННЯ</h4>
             <StickyBox menuItems={ITEMS}>
-                <div className={style.container}>
+                <div>
                     <StepFirst/>
                     <StepSecond/>
                     <StepThird/>

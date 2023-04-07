@@ -1,20 +1,24 @@
-import React, { cloneElement, useEffect, useState, useRef, Children } from 'react';
+import React, {cloneElement, useEffect, useState, useRef, Children, useContext} from 'react';
+import { DeviceContext } from 'Contexts/Device/DeviceContext';
 
 import style from './style.scss';
 
 const StickyBox = ({ children, menuItems }) => {
+    const { isDesktop } = useContext(DeviceContext);
     const [activeIndex, setActiveIndex] = useState(0);
     const contentRefs = useRef([]);
+    const itemsRef = useRef();
 
     useEffect(() => {
         const handleScroll = () => {
+            const itemsHeight = isDesktop ? 20 : itemsRef.current?.offsetHeight + 2 || 0;
             const index = contentRefs.current.reduce((closestIndex, ref, idx) => {
                 const rect = ref.getBoundingClientRect();
                 const prevRect = contentRefs.current[idx - 1]?.getBoundingClientRect();
 
                 if (idx === 0) {
-                    return rect.bottom - 20 <= window.innerHeight ? idx : -1;
-                } else if (prevRect && prevRect.bottom - 20 <= 0 && rect.bottom - 20 > 0) {
+                    return rect.bottom - itemsHeight <= window.innerHeight ? idx : -1;
+                } else if (prevRect && prevRect.bottom - itemsHeight <= 0 && rect.bottom - itemsHeight > 0) {
                     return idx;
                 } else {
                     return closestIndex;
@@ -44,13 +48,20 @@ const StickyBox = ({ children, menuItems }) => {
 
     const handleMenuItemClick = (index) => {
         setActiveIndex(index);
-        contentRefs.current[index].scrollIntoView({ behavior: 'smooth' });
+        const itemsHeight = isDesktop ? 0 : itemsRef.current?.offsetHeight + 2 || 0;
+        const targetPosition = contentRefs.current[index].offsetTop - itemsHeight;
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth',
+        });
+
         window.location.hash = `#${menuItems[index].hash}`;
     };
 
     return (
         <div className={style.container}>
-            <ul className={style.items}>
+            <ul className={style.items} ref={itemsRef}>
                 {
                     menuItems.map(({item}, index) => (
                         <li

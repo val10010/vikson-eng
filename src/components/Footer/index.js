@@ -16,6 +16,10 @@ const Footer = () => {
                         <Link to='https://instagram.com/vikson.eng' className={style.instagram} target="_blank"  />
                         <Link to='https://t.me/Vikson_eng' className={style.telegram} target="_blank" />
                     </div>
+                    <div className={style.design}>
+                        Дизайн розроблений
+                        <Link to='https://t.me/AndyFiss' className={style.link}>A.SIVTS</Link>
+                    </div>
                 </div>
             </div>
         </footer>

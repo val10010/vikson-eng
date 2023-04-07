@@ -14,7 +14,7 @@ const Instagram = () => {
                 {
                     POSTS.map(item => (
                         <Link key={item.link} to={item.link} target="_blank">
-                            <Image  src={item.imagePath}  alt={item.link} />
+                            <Image  src={item.imagePath}  alt={item.link} className={style.post} />
                         </Link>
                     ))
                 }

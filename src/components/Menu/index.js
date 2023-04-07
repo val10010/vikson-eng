@@ -1,21 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { DeviceContext } from 'Contexts/Device/DeviceContext';
 
-import style from './style.scss';
+import Mobile from './components/Mobile';
+import Desktop from './components/Desktop';
 
-const Menu = ({ children }) => {
+const Menu = ({ children, isShowPlanBtn }) => {
+    const { isMobile } = useContext(DeviceContext);
+
     return (
-        <nav className={style.menu}>
-            <Link to='/' className={style.logo}>VIKSON.ENG</Link>
-            <div>
-                {
-                    React.Children.map(children, (child) => {
-                        return React.cloneElement(child, { className: style.item });
-                    })
-                }
-            </div>
-            <Link to='tel:+(380) 98 6 000 884' className={style.phoneNumber}> +(380) 98 6 000 884 </Link>
-        </nav>
+        isMobile
+            ? <Mobile isShowPlanBtn={isShowPlanBtn}>{ children }</Mobile>
+            : <Desktop>{ children }</Desktop>
     );
 };
 

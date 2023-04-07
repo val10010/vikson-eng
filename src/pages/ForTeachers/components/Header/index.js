@@ -7,7 +7,7 @@ import style from './style.scss';
 const Header = () => {
     return (
         <header className={style.header}>
-            <Menu>
+            <Menu isShowPlanBtn={true}>
                 <Link to='/'>Головна</Link>
                 <Link to='#'>Вакансії</Link>
             </Menu>

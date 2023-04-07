@@ -4,6 +4,9 @@
   display: flex;
   align-items: flex-start;
 
+  @include tabletMobile {
+    display: block;
+  }
 
   .items {
     position: sticky;
@@ -11,6 +14,18 @@
     left: 0;
     width: 50%;
     margin-top: 40px;
+
+    @include tabletMobile {
+      top: 0;
+      width: 100%;
+      background: var(--primary-bg-color);
+      margin: 0 0 30px 0;
+      padding-top: 30px;
+    }
+
+    @include mobile {
+      z-index: 101;
+    }
 
     .item {
       font-family: var(--primary-text-font);
@@ -25,16 +40,29 @@
       &:last-child {
         margin-bottom: 0;
       }
+
+      @include tabletMobile {
+        &:last-child {
+          padding-bottom: 20px;
+        }
+      }
+
+      @include mobile {
+        font-size: 20px;
+      }
     }
 
     .active {
       color: var(--primary-text-color);
-      border-bottom: 1px solid var(--primary-border-color);
       transition: color .5s ease;
     }
   }
 
   .content {
     width: 50%;
+
+    @include tabletMobile {
+      width: 100%;
+    }
   }
 }

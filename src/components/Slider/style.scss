@@ -11,6 +11,15 @@
   display: flex;
   justify-content: space-between;
 
+  @include mobile {
+    top: -95px;
+    right: 0;
+    left: auto;
+    transform: none;
+    width: auto;
+  }
+
+
   .prevButton {
     background: url('../../images/slider_arrow.svg');
     width: 70px;
@@ -26,6 +35,12 @@
 
     &:hover {
       background: url('../../images/slider_arrow_hover.svg');
+    }
+
+    @include mobile {
+      width: 50px;
+      height: 50px;
+      margin-right: 24px;
     }
   }
 
@@ -46,6 +61,11 @@
     &:hover {
       background: url('../../images/slider_arrow_hover.svg');
     }
+
+    @include mobile {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
@@ -61,12 +81,21 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
+
+  @include mobile {
+    margin: 0;
+    padding: 20px;
+  }
 }
 
 .author {
   display: flex;
   align-items: center;
   margin: 40px 0 0 100px;
+
+  @include mobile {
+    margin: 50px 0 0 0;
+  }
 
   .data {
     margin-left: 30px;

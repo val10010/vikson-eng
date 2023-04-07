@@ -20,6 +20,9 @@ module.exports = {
         resolve: {
             alias: {
                 Components: path.resolve(__dirname, 'src/components'),
+                Contexts: path.resolve(__dirname, 'src/contexts'),
+                Utils: path.resolve(__dirname, 'src/utils'),
+                Hooks: path.resolve(__dirname, 'src/hooks'),
             },
             extensions: [".js"]
         },
@@ -56,7 +59,12 @@ module.exports = {
                                 }
                             }
                         },
-                        "sass-loader"
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                additionalData: `@import "src/styles/global.scss";`
+                            }
+                        }
                     ]
                 },
                 {

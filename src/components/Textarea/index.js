@@ -1,12 +1,23 @@
-import React from 'react';
+import { buildClassName } from 'Utils'
+import React, { forwardRef } from 'react';
 
 import style from './style.scss';
 
-const Textarea = ({ className, ...props }) => {
+const Textarea = forwardRef(({ classNames = {}, className, isValid, isError, ...props }, ref) => {
     return (
-        <textarea className={`${style.textarea} ${className}`} { ...props} >
-        </textarea>
+        <div
+            className={
+                `${buildClassName(
+                    ['wrapper', isError && 'error', isValid && 'valid'], style, classNames
+                )} ${className}`
+            }
+        >
+           <textarea className={style.textarea} { ...props} ref={ref} >
+           </textarea>
+            <span className={style.errorMessage}>{ isError }</span>
+        </div>
+
     );
-};
+});
 
 export default Textarea;

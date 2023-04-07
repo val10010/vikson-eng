@@ -1,7 +1,15 @@
 .footer {
   width: 100%;
   background: var(--primary-footer-bg-color);
-  padding: 37px 0 193px;
+  padding: 37px 0 50px;
+
+  @include tablet {
+    padding: 70px 34px 40px;
+  }
+
+  @include mobile {
+    padding: 52px 16px 30px;
+  }
 
   .container {
     width: 100%;
@@ -9,6 +17,11 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    position: relative;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   .logo {
@@ -17,6 +30,10 @@
     font-size: 30px;
     line-height: 140%;
     color: var(--primary-text-color);
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
   }
 
   .item {
@@ -42,6 +59,7 @@
 
     .socialMedia {
       display: flex;
+      margin-top: 40px;
 
       .instagram {
         background: url('../../images/i.svg');
@@ -54,6 +72,21 @@
         background: url('../../images/t.svg');
         width: 30px;
         height: 30px;
+      }
+    }
+
+    .design {
+      margin-top: 110px;
+      font-family: var(--secondary-text-font);
+      color: var(--secondary-text-color);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+
+
+      .link {
+        margin-left: 5px;
+        color: var(--highlighted-text-color);
       }
     }
   }

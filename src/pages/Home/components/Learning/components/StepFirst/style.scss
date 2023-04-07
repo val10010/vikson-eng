@@ -3,6 +3,11 @@
   border-bottom: 1px solid var(--primary-border-color);
   padding: 40px 40px 120px 40px;
 
+  @include tabletMobile {
+    border-left: none;
+    padding: 0 0 120px 0;
+  }
+
   .title {
     font-weight: 400;
     font-size: 30px;
@@ -10,5 +15,9 @@
     font-family: var(--primary-text-font);
     color: var(--primary-text-color);
     margin-bottom: 30px;
+
+    @include mobile {
+      font-size: 24px;
+    }
   }
 }

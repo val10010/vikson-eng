@@ -1,16 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'Components/Image';
+import { DeviceContext } from 'Contexts/Device/DeviceContext';
+
+import { FACTS } from './constants';
 
 import style from './style.scss';
 
 const AboutSpeaker = () => {
-    const facts = [
-        '5 років досвіду',
-        '4 професійних викладача в команді',
-        'Диплом перекладача і викладача іноземних мов',
-        'Cекретна методика - залишати позитивний якор від навчання'
-    ];
-
+    const { isMobile } = useContext(DeviceContext);
 
     return (
         <section className={style.container}>
@@ -21,9 +18,10 @@ const AboutSpeaker = () => {
                    my cup of tea, коли побачила скільки років люди витрачають марно,
                    так і не навчившись говорити бажанною мовою
                </p>
+               {isMobile && <Image src='../../images/home/hero_speaker.png' className={style.hero}/> }
                <ul className={style.facts}>
                    {
-                       facts.map(item => (
+                       FACTS.map(item => (
                            <li className={style.fact} key={item}>
                                { item }
                            </li>
@@ -31,7 +29,7 @@ const AboutSpeaker = () => {
                    }
                </ul>
            </div>
-            <Image src='../../images/home/hero_speaker.png'/>
+            {!isMobile && <Image src='../../images/home/hero_speaker.png' className={style.hero}/> }
         </section>
     );
 };

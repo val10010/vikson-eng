@@ -1,46 +1,62 @@
 .header {
+  margin-bottom: 170px;
+
+  @include mobile {
+    margin-bottom: 100px;
+  }
 
   .container {
-    width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include container;
   }
 
   .content {
     margin-right: 36px;
 
+    @include mobile {
+      margin-right: 0;
+      padding-top: 78px;
+    }
+
     .title {
       font-family: var(--primary-text-font);
       font-style: normal;
       font-weight: 400;
-      font-size: 60px;
-      line-height: 73px;
       text-transform: uppercase;
       color: var(--primary-text-color);
       margin-bottom: 20px;
+      @include title;
     }
 
     .desc {
       font-family: var(--secondary-text-font);
       font-style: normal;
       font-weight: 400;
-      font-size: 18px;
-      line-height: 140%;
       color: var(--secondary-text-color);
+      @include desc;
     }
 
     .button {
       height: 50px;
       width: 266px;
       margin-top: 50px;
+
+      @include mobile {
+        margin-top: 30px;
+      }
     }
   }
 
   .hero {
-    padding: 100px 0 170px;
+    padding: 100px 0 0;
     height: 376px;
+
+    @include tablet {
+      height: 294px;
+    }
+
   }
 }

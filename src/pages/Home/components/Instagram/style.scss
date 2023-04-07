@@ -1,18 +1,26 @@
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 200px;
+ @include container;
+  margin-bottom: 200px;
   text-align: center;
+
+  @include tablet {
+    margin-bottom: 200px;
+  }
+
+  @include mobile {
+    margin-bottom: 100px;
+    margin-right: 0;
+    margin-left: 0;
+  }
 
   .title {
     font-family: var(--primary-text-font);
     font-weight: 400;
-    font-size: 60px;
-    line-height: 73px;
     text-align: center;
     text-transform: uppercase;
     color: #5259FF;
     margin-bottom: 20px;
+    @include title;
   }
 
   .subtitle {
@@ -22,10 +30,30 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 50px;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   .wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include tabletMobile {
+      overflow-y: hidden;
+      overflow-x: scroll;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .post {
+      width: 218px;
+      height: 218px;
+      min-width: 218px;
+      margin-right: 50px;
+    }
   }
 }

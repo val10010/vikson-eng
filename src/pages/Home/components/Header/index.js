@@ -1,15 +1,18 @@
-import React from 'react';
 import Menu from 'Components/Menu';
 import Image from 'Components/Image';
 import Button from 'Components/Button';
 import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { DeviceContext } from 'Contexts/Device/DeviceContext';
 
 import style from './style.scss';
 
 const Header = () => {
+    const { isMobile } = useContext(DeviceContext);
+
     return (
         <header className={style.header}>
-            <Menu>
+            <Menu isShowPlanBtn={true}>
                 <Link to='/for-teachers'>Викладачам</Link>
                 <Link to='#'>Вакансії</Link>
             </Menu>
@@ -25,7 +28,7 @@ const Header = () => {
                         почати навчання
                     </Button>
                 </div>
-                <Image src='../../images/home/hero_main.png' alt="hero" className={style.hero}/>
+                { !isMobile && <Image src='../../images/home/hero_main.png' alt="hero" className={style.hero}/> }
             </div>
         </header>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 
 import style from './style.scss';
 
-const TariffPlan = ({ className, number, title, subtitle, desc, modifier }) => {
+const TariffPlan = ({ className, number, title, subtitle, desc, modifier, id, onClick }) => {
     return (
         <div className={`${style.container} ${className || ''} ${style[modifier] || ''}`}>
             <p className={style.number}>
@@ -17,7 +17,12 @@ const TariffPlan = ({ className, number, title, subtitle, desc, modifier }) => {
             <p className={style.desc}>
                 { desc }
             </p>
-            <div className={style.details}>подробиці</div>
+            <div
+                onClick={() => onClick(id)}
+                className={style.details}
+            >
+                подробиці
+            </div>
         </div>
     );
 };

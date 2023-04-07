@@ -11,6 +11,12 @@
   line-height: 22px;
   font-family: var(--primary-text-font);
 
+  @include mobile {
+    font-size: 16px;
+    line-height: 19px;
+    width: 100%!important;
+  }
+
   &:hover {
     background: transparent;
     color: var(--secondary-btn-text-color);
@@ -36,8 +42,25 @@
   color: var(--secondary-btn-text-color);
 
   &:hover {
+    background: transparent;
+    border: 1px solid var(--secondary-btn-text-color);
+    color: var(--secondary-btn-text-color);
     opacity: 0.7;
     transition: background .3s;
+  }
+}
+
+.white {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+
+  &:hover {
+    opacity: 0.7;
+    transition: background .3s;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
   }
 }
 
