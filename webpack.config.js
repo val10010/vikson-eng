@@ -23,6 +23,7 @@ module.exports = {
                 Contexts: path.resolve(__dirname, 'src/contexts'),
                 Utils: path.resolve(__dirname, 'src/utils'),
                 Hooks: path.resolve(__dirname, 'src/hooks'),
+                Services: path.resolve(__dirname, 'src/services')
             },
             extensions: [".js"]
         },

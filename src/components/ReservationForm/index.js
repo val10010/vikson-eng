@@ -1,8 +1,9 @@
 import React from 'react';
+import Button from  'Components/Button';
+import { innerServices } from 'Services';
+import { useForm } from 'react-hook-form';
 import TextInput from 'Components/TextInput';
 import Textarea from 'Components/Textarea';
-import Button from  'Components/Button';
-import { useForm } from 'react-hook-form';
 import Checkbox from 'Components/Checkbox';
 
 import style from './style.scss';
@@ -14,8 +15,9 @@ const ReservationForm = ({ className }) => {
         formState: { errors, isValid, touchedFields, dirtyFields},
     } = useForm({ mode: 'onChange' });
 
-    const onSubmit = (data) => {
-        console.log(data);
+
+    const onSubmit = async (data) => {
+        await innerServices.sendUserData(data);
     };
 
     return (
