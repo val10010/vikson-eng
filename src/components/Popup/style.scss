@@ -34,7 +34,9 @@
   border: none;
 
   @include mobile {
-    height: 18px;
-    width: 18px;
+    height: 13px;
+    width: 13px;
+    top: 11px;
+    right: 13px;
   }
 }

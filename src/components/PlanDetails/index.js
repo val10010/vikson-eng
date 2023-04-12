@@ -3,7 +3,7 @@ import Button from 'Components/Button';
 
 import style from './style.scss';
 
-const PlanDetails = ({ isOpen, onClose, className, details, id }) => {
+const PlanDetails = ({ isOpen, onClose, onBtnClick, className, details, id }) => {
     if (!isOpen) {
         return null;
     }
@@ -46,7 +46,10 @@ const PlanDetails = ({ isOpen, onClose, className, details, id }) => {
                         </div>
                     }
                 </div>
-                <Button className={style.button}>
+                <Button
+                    onClick={onBtnClick}
+                    className={style.button}
+                >
                     навчатись
                 </Button>
             </div>

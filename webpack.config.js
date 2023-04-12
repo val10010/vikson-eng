@@ -11,7 +11,6 @@ module.exports = {
             port: 3000,
             historyApiFallback: true
         },
-        mode: 'development',
         entry: "./src/index.js",
         output: {
             path: path.join(__dirname, "/build"),
@@ -109,5 +108,5 @@ module.exports = {
                 silent: false,
                 strict: true,
             }),
-        ]
+        ],
 };

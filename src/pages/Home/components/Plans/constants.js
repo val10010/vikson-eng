@@ -32,7 +32,7 @@ export const PLANS_CHILDREN = [
         modifier: 'individual'
     },
     {
-        id: 3,
+        id: 4,
         number: '#5',
         title: 'Парні / Групові заняття',
         subtitle: 'Від 2 до 5 учнів + викладач',
@@ -88,11 +88,20 @@ export const PLANS_DETAILS = [
         ]
     },
     {
-        title: 'Заняття',
+        title: 'Індивідуальне заняття',
         blocks: [
             {
                 items: [1, 4, 8, 10],
                 price: 350
+            }
+        ]
+    },
+    {
+        title: 'Парні / Групові заняття',
+        blocks: [
+            {
+                items: [1, 4, 8, 10],
+                price: 300
             }
         ]
     }

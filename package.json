@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --hot",
-    "build": "webpack --progress",
+    "build": "webpack --mode production --progress",
     "deploy": "gh-pages -d build"
   },
   "repository": {

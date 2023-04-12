@@ -6,8 +6,11 @@ import PlanDetails from 'Components/PlanDetails';
 import { PLANS, PLANS_CHILDREN, PLANS_DETAILS } from './constants';
 
 import style from './style.scss';
+import Popup from "Components/Popup";
+import CallbackForm from "Components/CallbackForm";
 
 const Plans = () => {
+    const [isCallbackFormOpen, setCallbackFormOpen] = useState(false);
     const [planNumber, setPlanNumber] = useState(null);
     const location = useLocation();
 
@@ -42,10 +45,21 @@ const Plans = () => {
             </section>
             <PlanDetails
                 id={planNumber}
-                isOpen={planNumber !== null}
                 details={PLANS_DETAILS}
+                isOpen={planNumber !== null}
                 onClose={() => setPlanNumber(null)}
+                onBtnClick={() => {
+                    setPlanNumber(null);
+                    setCallbackFormOpen(true);
+                }}
             />
+            <Popup
+                isOpen={isCallbackFormOpen}
+                className={style.callbackForm}
+                onClose={() => setCallbackFormOpen(false)}
+            >
+                <CallbackForm/>
+            </Popup>
         </>
     );
 };

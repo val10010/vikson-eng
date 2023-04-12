@@ -3,6 +3,8 @@ import axios from 'axios';
 // Default instance
 export const instance = axios.create({
     baseURL: '',
-    responseType: 'json'
+    responseType: 'json',
+    headers: {
+        'Content-Type': 'application/json'
+    }
 });
-instance.defaults.headers.post['Content-Type'] = 'application/json';

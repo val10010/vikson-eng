@@ -60,3 +60,15 @@
 
   }
 }
+
+.callbackForm {
+  padding: 40px 0;
+
+  @include tablet {
+    padding: 30px 0;
+  }
+
+  @include mobile {
+    padding: 20px 0;
+  }
+}

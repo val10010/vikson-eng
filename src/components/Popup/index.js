@@ -8,8 +8,8 @@ const Popup = ({ isOpen, onClose, children, className }) => {
     }
 
     return (
-        <div className={`${style.overlay} ${className}`} onClick={onClose}>
-            <div className={style.container} onClick={(e) => e.stopPropagation()}>
+        <div className={style.overlay} onClick={onClose}>
+            <div className={`${style.container} ${className}`} onClick={(e) => e.stopPropagation()}>
                 {children}
                 <button className={style.close} onClick={onClose}>
                 </button>

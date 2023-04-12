@@ -60,3 +60,15 @@
     }
   }
 }
+
+.popup {
+  padding: 60px;
+  font-size: 30px;
+  font-family: var(--primary-text-font);
+  color: var(--primary-text-color);
+
+  @include mobile {
+    font-size: 18px;
+    padding: 60px 20px;
+  }
+}

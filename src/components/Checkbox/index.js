@@ -5,11 +5,12 @@ import style from './style.scss';
 
 const Checkbox = forwardRef(({ className, classNames = {}, children, registerProps, isError }, ref) => {
     return (
-       <div className={
-           `${buildClassName(
-               ['container'], style, classNames
-           )} ${className}`
-         }
+       <div
+           className={
+             `${buildClassName(
+                 ['container'], style, classNames
+             )} ${className}`
+           }
        >
            <div className={style.wrapper}>
                <input
@@ -20,7 +21,7 @@ const Checkbox = forwardRef(({ className, classNames = {}, children, registerPro
                />
                <span className={style.checkbox} />
            </div>
-           <label htmlFor={registerProps.name} className={`${style.label} ${className}`}>
+           <label htmlFor={registerProps.name} className={`${style.label}`}>
                { children }
            </label>
            <span className={style.errorMessage}>{ isError }</span>
