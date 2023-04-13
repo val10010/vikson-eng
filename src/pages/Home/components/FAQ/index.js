@@ -8,16 +8,16 @@ const FAQ = () => {
     return (
         <section className={style.container}>
             <h4 className={style.title}>FAQ</h4>
-            <div className={style.wrapper}>
+            <ol className={style.list}>
                 {
                     FAQ_LIST.map(({ title, desc }) => (
                         <Toggle key={title}>
-                            <p dangerouslySetInnerHTML={{ __html: title }} />
-                            <div className={style.desc} dangerouslySetInnerHTML={{ __html: desc }} />
+                            <li className={style.item} > { title } </li>
+                            <div className={style.desc}> { desc } </div>
                         </Toggle>
                     ))
                 }
-            </div>
+            </ol>
         </section>
     );
 };

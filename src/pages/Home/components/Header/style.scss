@@ -11,6 +11,12 @@
     justify-content: space-between;
     align-items: center;
     @include container;
+
+
+    @include mobile {
+      flex-direction: column-reverse;
+
+    }
   }
 
   .content {

@@ -3,15 +3,13 @@ import Popup from 'Components/Popup';
 import Image from 'Components/Image';
 import Button from 'Components/Button';
 import { Link } from 'react-router-dom';
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import CallbackForm from 'Components/CallbackForm';
-import { DeviceContext } from 'Contexts/Device/DeviceContext';
 
 import style from './style.scss';
 
 const Header = () => {
     const [isCallbackFormOpen, setCallbackFormOpen] = useState(false);
-    const { isMobile } = useContext(DeviceContext);
 
     return (
         <>
@@ -36,15 +34,15 @@ const Header = () => {
                             почати навчання
                         </Button>
                     </div>
-                    { !isMobile && <Image src='../../images/home/hero_main.png' alt="hero" className={style.hero}/> }
+                    <Image src='../../images/home/hero_main.png' alt="hero" className={style.hero}/>
                 </div>
             </header>
             <Popup
                 isOpen={isCallbackFormOpen}
-                onClose={() => setCallbackFormOpen(false)}
                 className={style.callbackForm}
+                onClose={() => setCallbackFormOpen(false)}
             >
-                <CallbackForm/>
+                <CallbackForm />
             </Popup>
         </>
     );

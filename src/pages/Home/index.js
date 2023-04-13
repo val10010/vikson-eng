@@ -1,12 +1,14 @@
-import React from 'react';
-import FAQ from './components/FAQ';
-import Plans from './components/Plans';
+import React, { lazy } from 'react';
+
 import Header from './components/Header';
-import Reviews from './components/Reviews';
-import Learning from './components/Learning';
-import Instagram from './components/Instagram';
-import AboutSpeaker from './components/AboutSpeaker';
-import Consultation from './components/Сonsultation';
+
+const FAQ = lazy(() => import('./components/FAQ'));
+const Plans = lazy(() => import('./components/Plans'));
+const Reviews = lazy(() => import('./components/Reviews'));
+const Learning = lazy(() => import('./components/Learning'));
+const Instagram = lazy(() => import('./components/Instagram'));
+const AboutSpeaker = lazy(() => import('./components/AboutSpeaker'));
+const Consultation = lazy(() => import('./components/Consultation'));
 
 const Home = () => {
     return (

@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react';
 import Popup from 'Components/Popup';
 import Toggle from 'Components/Toggle';
 import Button from 'Components/Button';
+import React, { useContext, useState } from 'react';
 import ReservationForm from 'Components/ReservationForm';
 import { DeviceContext } from 'Contexts/Device/DeviceContext';
 

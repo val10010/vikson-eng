@@ -1,7 +1,7 @@
-import React from 'react';
-import Home from './pages/Home';
-import ForTeachers from './pages/ForTeachers';
-import NotFound from './pages/NotFound';
+import React, {lazy} from 'react';
+const Home = lazy(() => import('Pages/Home'));
+const NotFound = lazy(() => import('Pages/NotFound'));
+const ForTeachers = lazy(() => import('Pages/ForTeachers'));
 
 const routes = [
     { path: '/', element: <Home /> , exact: true },

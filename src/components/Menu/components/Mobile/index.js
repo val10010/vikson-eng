@@ -1,8 +1,8 @@
-import React, { useState, useCallback } from 'react';
 import Burger from 'Components/Burger';
 import { Link } from 'react-router-dom';
 import Button from 'Components/Button';
 import { useLockBodyScroll } from 'Hooks';
+import React, { useState, useCallback } from 'react';
 
 import style from './style.scss';
 

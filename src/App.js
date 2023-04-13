@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import routes from './routes';
-import Footer from 'Components/Footer';
 import { useRoutes } from 'react-router-dom';
 import DeviceProvider from './contexts/Device/DeviceProvider';
+
+const Footer = lazy(() => import('Components/Footer'));
 
 import './App.scss';
 

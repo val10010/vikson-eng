@@ -14,7 +14,7 @@ module.exports = {
         entry: "./src/index.js",
         output: {
             path: path.join(__dirname, "/build"),
-            filename: "script.min.js?[hash]",
+            filename: "[name].script.min.js?[fullhash]",
         },
         resolve: {
             alias: {
@@ -22,9 +22,32 @@ module.exports = {
                 Contexts: path.resolve(__dirname, 'src/contexts'),
                 Utils: path.resolve(__dirname, 'src/utils'),
                 Hooks: path.resolve(__dirname, 'src/hooks'),
-                Services: path.resolve(__dirname, 'src/services')
+                Services: path.resolve(__dirname, 'src/services'),
+                Pages: path.resolve(__dirname, 'src/pages'),
             },
             extensions: [".js"]
+        },
+        optimization: {
+            splitChunks: {
+                chunks: 'all',
+                minChunks: 1,
+                maxAsyncRequests: 30,
+                maxInitialRequests: 30,
+                automaticNameDelimiter: '~',
+                enforceSizeThreshold: 50000,
+                cacheGroups: {
+                    defaultVendors: {
+                        test: /[\\/]node_modules[\\/]/,
+                        priority: -10,
+                        reuseExistingChunk: true,
+                    },
+                    default: {
+                        minChunks: 2,
+                        priority: -20,
+                        reuseExistingChunk: true,
+                    },
+                },
+            },
         },
         module: {
             rules: [
@@ -86,7 +109,7 @@ module.exports = {
                 template: "./src/index.html"
             }),
             new MiniCssExtractPlugin({
-                filename: 'style.min.css?[contenthash]',
+                filename: '[name].style.min.css?[contenthash]',
             }),
             new CopyPlugin({
                 patterns: [
