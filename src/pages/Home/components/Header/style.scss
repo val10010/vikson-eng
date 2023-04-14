@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     @include container;
+    padding-top: 100px;
 
 
     @include mobile {
@@ -57,11 +58,11 @@
   }
 
   .hero {
-    padding: 100px 0 0;
     height: 376px;
 
-    @include tablet {
-      height: 294px;
+    @include tabletMobile {
+      height: 280px;
+      width: 280px;
     }
 
   }

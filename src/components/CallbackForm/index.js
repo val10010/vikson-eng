@@ -113,7 +113,8 @@ const CallbackForm = () => {
                 className={style.popup}
                 onClose={() => setPopupOpen(false)}
             >
-                Ваші дані успішно надіслані!
+                <p className={style.infoTitle}>Дякую, ваші дані успішно відправлені!</p>
+                <p className={style.infoSubtitle}>З вами зв'яжуться найближчим часом.</p>
             </Popup>
         </>
 
