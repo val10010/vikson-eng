@@ -56,17 +56,17 @@ const ReservationForm = ({ className }) => {
                         </div>
                     )}
                     <RadioButton
-                        id="TelegramId"
+                        id="Telegram"
                         value="Telegram"
                         registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
                     />
                     <RadioButton
-                        id="ViberId"
+                        id="Viber"
                         value="Viber"
                         registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
                     />
                     <RadioButton
-                        id="WhatsAppId"
+                        id="WhatsApp"
                         value="WhatsApp"
                         registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
                     />

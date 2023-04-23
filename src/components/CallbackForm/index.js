@@ -90,13 +90,13 @@ export const CallbackForm = ({ btnOnClick }) => {
                                 </div>
                             )}
                             <RadioButton
-                                id="yesId"
+                                id="yes"
                                 value="так"
                                 className={style.radioBtn}
                                 registerProps={register('experience', { required: 'Це поле обов\'язкове' })}
                             />
                             <RadioButton
-                                id="noId"
+                                id="no"
                                 value="ні"
                                 registerProps={register('experience', { required: 'Це поле обов\'язкове' })}
                             />
