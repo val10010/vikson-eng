@@ -28,6 +28,37 @@
     }
   }
 
+  .radioBtnsTitle {
+    font-family: var(--secondary-text-font);
+    color: var(--primary-text-color);
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 400;
+    margin-bottom: 20px;
+
+    @include tabletMobile {
+      font-size: 16px;
+    }
+  }
+
+  .radioBtns {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .errorMessage {
+      font-family: var(--secondary-text-font);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      color: var(--error-text-color);
+    }
+  }
+
   .input {
     margin-bottom: 20px;
 
@@ -58,17 +89,5 @@
       font-weight: 500;
       color: var(--primary-text-color)
     }
-  }
-}
-
-.popup {
-  padding: 60px;
-  font-size: 30px;
-  font-family: var(--primary-text-font);
-  color: var(--primary-text-color);
-
-  @include mobile {
-    font-size: 18px;
-    padding: 60px 20px;
   }
 }

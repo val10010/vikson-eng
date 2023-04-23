@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import Popup from 'Components/Popup';
+import React from 'react';
 import Button from  'Components/Button';
+import { useDispatch } from 'react-redux';
 import { innerServices } from 'Services';
+import * as actions from 'Actions/actions';
 import { useForm } from 'react-hook-form';
-import TextInput from 'Components/TextInput';
 import Textarea from 'Components/Textarea';
 import Checkbox from 'Components/Checkbox';
+import TextInput from 'Components/TextInput';
+import RadioButton from 'Components/RadioButton';
 
 import style from './style.scss';
 
 const ReservationForm = ({ className }) => {
-    const [isPopupOpen, setPopupOpen] = useState(false);
+    const dispatch = useDispatch();
     const {
         register,
         handleSubmit,
@@ -26,10 +28,13 @@ const ReservationForm = ({ className }) => {
        });
 
        if (res.success) {
-           setPopupOpen(true);
            reset();
+           dispatch(actions.showPopup({
+               contents: [{
+                   name: 'Success'
+               }]
+           }))
        }
-
     };
 
     return (
@@ -43,17 +48,36 @@ const ReservationForm = ({ className }) => {
                     isValid={touchedFields?.name && !errors?.name && dirtyFields.name}
                     {...register('name', { required: 'Заповнить це поле' })}
                 />
+                <p className={style.radioBtnsTitle}>Оберіть месенджер для зв'язку*</p>
+                <div className={style.radioBtns}>
+                    {errors?.experience?.message && (
+                        <div className={style.errorMessage}>
+                            { errors.experience.message }
+                        </div>
+                    )}
+                    <RadioButton
+                        id="TelegramId"
+                        value="Telegram"
+                        registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
+                    />
+                    <RadioButton
+                        id="ViberId"
+                        value="Viber"
+                        registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
+                    />
+                    <RadioButton
+                        id="WhatsAppId"
+                        value="WhatsApp"
+                        registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
+                    />
+                </div>
                 <TextInput
-                    placeholder="Телефон* "
+                    placeholder="Телефон або нікнейм з месенджера* "
                     className={style.input}
                     isError={errors?.phone?.message}
                     isValid={touchedFields?.phone && !errors?.phone && dirtyFields.phone}
                     {...register('phone', {
-                        required: 'Заповнить це поле',
-                        pattern: {
-                            value: /^[0-9!@#$%^&*()_+=\[\]{};:"\\|,.<>\/?~-]+$/,
-                            message: 'Введіть вірний формат номеру телефону',
-                        },
+                        required: 'Заповнить це поле'
                     })}
                 />
                 <Textarea
@@ -74,16 +98,9 @@ const ReservationForm = ({ className }) => {
                 </Checkbox>
                 <div className={style.total}>
                     <span>Усього:</span>
-                    <span className={style.price}>250 грн. / 7$</span>
+                    <span className={style.price}>350 грн. / 10$</span>
                 </div>
             </form>
-            <Popup
-                isOpen={isPopupOpen}
-                className={style.popup}
-                onClose={() => setPopupOpen(false)}
-            >
-                Ваші дані успішно надіслані!
-            </Popup>
         </>
     );
 };

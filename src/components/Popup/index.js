@@ -2,7 +2,7 @@ import React from 'react';
 
 import style from './style.scss';
 
-const Popup = ({ isOpen, onClose, children, className }) => {
+const Popup = ({ isOpen, onClose, children, className = '' }) => {
     if (!isOpen) {
         return null;
     }

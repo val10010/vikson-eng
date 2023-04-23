@@ -1,20 +1,38 @@
-import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import * as actions from 'Actions/actions';
 import { useSmoothScrollToHash } from 'Hooks';
 import { useLocation } from 'react-router-dom';
 import TariffPlan from 'Components/TariffPlan';
 import PlanDetails from 'Components/PlanDetails';
+import React, {useCallback, useState} from 'react';
 import { PLANS, PLANS_CHILDREN, PLANS_DETAILS } from './constants';
 
 import style from './style.scss';
-import Popup from "Components/Popup";
-import CallbackForm from "Components/CallbackForm";
 
 const Plans = () => {
-    const [isCallbackFormOpen, setCallbackFormOpen] = useState(false);
     const [planNumber, setPlanNumber] = useState(null);
     const location = useLocation();
+    const dispatch = useDispatch();
 
     useSmoothScrollToHash(location.hash);
+
+    const handleBtnClick = useCallback(() => {
+        dispatch(actions.showPopup({
+            contents: [{
+                name: 'CallbackForm',
+                props: {
+                    btnonclick: {
+                        actionName: 'showPopup',
+                        props: {
+                            contents: [{
+                                name: 'Success'
+                            }]
+                        }
+                    }
+                }
+            }]
+        }))
+    }, [])
 
     return (
         <>
@@ -50,16 +68,9 @@ const Plans = () => {
                 onClose={() => setPlanNumber(null)}
                 onBtnClick={() => {
                     setPlanNumber(null);
-                    setCallbackFormOpen(true);
+                    handleBtnClick();
                 }}
             />
-            <Popup
-                isOpen={isCallbackFormOpen}
-                className={style.callbackForm}
-                onClose={() => setCallbackFormOpen(false)}
-            >
-                <CallbackForm/>
-            </Popup>
         </>
     );
 };

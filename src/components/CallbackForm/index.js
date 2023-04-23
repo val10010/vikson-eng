@@ -1,7 +1,6 @@
-import Popup from 'Components/Popup';
-import React, { useState } from 'react';
-import { innerServices } from 'Services';
+import React from 'react';
 import Button from 'Components/Button';
+import { innerServices } from 'Services';
 import { useForm } from 'react-hook-form';
 import Checkbox from 'Components/Checkbox';
 import Textarea from 'Components/Textarea';
@@ -10,8 +9,7 @@ import RadioButton from 'Components/RadioButton';
 
 import style from './style.scss';
 
-const CallbackForm = () => {
-    const [isPopupOpen, setPopupOpen] = useState(false);
+export const CallbackForm = ({ btnOnClick }) => {
     const {
         register,
         handleSubmit,
@@ -26,8 +24,8 @@ const CallbackForm = () => {
         });
 
         if (res.success) {
-            setPopupOpen(true);
             reset();
+            btnOnClick && btnOnClick();
         }
     };
 
@@ -44,17 +42,36 @@ const CallbackForm = () => {
                             isValid={touchedFields?.name && !errors?.name && dirtyFields.name}
                             {...register('name', { required: 'Заповнить це поле' })}
                         />
+                        <p className={style.messengersTitle}>Оберіть месенджер для зв'язку*</p>
+                        <div className={style.messengers}>
+                            {errors?.experience?.message && (
+                                <div className={style.errorMessage}>
+                                    { errors.experience.message }
+                                </div>
+                            )}
+                            <RadioButton
+                                id="TelegramId"
+                                value="Telegram"
+                                registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
+                            />
+                            <RadioButton
+                                id="ViberId"
+                                value="Viber"
+                                registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
+                            />
+                            <RadioButton
+                                id="WhatsAppId"
+                                value="WhatsApp"
+                                registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
+                            />
+                        </div>
                         <TextInput
-                            placeholder="Телефон* "
+                            placeholder="Телефон або нікнейм з месенджера*"
                             className={style.input}
                             isError={errors?.phone?.message}
                             isValid={touchedFields?.phone && !errors?.phone && dirtyFields.phone}
                             {...register('phone', {
-                                required: 'Заповнить це поле',
-                                pattern: {
-                                    value: /^[0-9!@#$%^&*()_+=\[\]{};:"\\|,.<>\/?~-]+$/,
-                                    message: 'Введіть вірний формат номеру телефону',
-                                },
+                                required: 'Заповнить це поле'
                             })}
                         />
                         <Textarea
@@ -73,32 +90,31 @@ const CallbackForm = () => {
                                 </div>
                             )}
                             <RadioButton
-                                id="yes"
+                                id="yesId"
                                 value="так"
                                 className={style.radioBtn}
                                 registerProps={register('experience', { required: 'Це поле обов\'язкове' })}
                             />
                             <RadioButton
-                                id="no"
+                                id="noId"
                                 value="ні"
                                 registerProps={register('experience', { required: 'Це поле обов\'язкове' })}
                             />
                         </div>
                         <Textarea
                             placeholder="Коментар"
-                            className={style.comment}
                             {...register('comment')}
                         />
-
+                        <Checkbox
+                            className={style.checkbox}
+                            isError={errors?.consent?.message}
+                            registerProps={register('consent', { required: 'Це поле обов\'язкове' })}
+                        >
+                            даю згоду на обробку своїх персональних даних.
+                            Підтверджую, що ознайомлений з Політикою обробки персональних даних
+                        </Checkbox>
                     </div>
-                    <Checkbox
-                        className={style.checkbox}
-                        isError={errors?.consent?.message}
-                        registerProps={register('consent', { required: 'Це поле обов\'язкове' })}
-                    >
-                        даю згоду на обробку своїх персональних даних.
-                        Підтверджую, що ознайомлений з Політикою обробки персональних даних
-                    </Checkbox>
+
                 </div>
                 <Button
                     variant="primary"
@@ -108,14 +124,6 @@ const CallbackForm = () => {
                     Відправити
                 </Button>
             </form>
-            <Popup
-                isOpen={isPopupOpen}
-                className={style.popup}
-                onClose={() => setPopupOpen(false)}
-            >
-                <p className={style.infoTitle}>Дякую, ваші дані успішно відправлені!</p>
-                <p className={style.infoSubtitle}>З вами зв'яжуться найближчим часом.</p>
-            </Popup>
         </>
 
     );

@@ -1,15 +1,33 @@
 import Menu from 'Components/Menu';
-import Popup from 'Components/Popup';
 import Image from 'Components/Image';
 import Button from 'Components/Button';
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
-import CallbackForm from 'Components/CallbackForm';
+import { useDispatch } from 'react-redux';
+import React, { useCallback } from 'react';
+import * as actions from 'Actions/actions';
 
 import style from './style.scss';
 
 const Header = () => {
-    const [isCallbackFormOpen, setCallbackFormOpen] = useState(false);
+    const dispatch = useDispatch();
+
+    const handleBtnClick = useCallback(() => {
+        dispatch(actions.showPopup({
+            contents: [{
+                name: 'CallbackForm',
+                props: {
+                    btnonclick: {
+                        actionName: 'showPopup',
+                        props: {
+                            contents: [{
+                                name: 'Success'
+                            }]
+                        }
+                    }
+                }
+            }]
+        }))
+    }, [])
 
     return (
         <>
@@ -29,7 +47,7 @@ const Header = () => {
                         <Button
                             variant="primary"
                             className={style.button}
-                            onClick={() => setCallbackFormOpen(true)}
+                            onClick={handleBtnClick}
                         >
                             почати навчання
                         </Button>
@@ -37,13 +55,6 @@ const Header = () => {
                     <Image src='../../images/home/hero_main.png' alt="hero" className={style.hero}/>
                 </div>
             </header>
-            <Popup
-                isOpen={isCallbackFormOpen}
-                className={style.callbackForm}
-                onClose={() => setCallbackFormOpen(false)}
-            >
-                <CallbackForm />
-            </Popup>
         </>
     );
 };
