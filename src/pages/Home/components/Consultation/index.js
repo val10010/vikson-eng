@@ -22,7 +22,7 @@ const Consultation = () => {
                         </p>
                         <ul className={style.benefits}>
                             <li className={style.benefit}>
-                                Аналіз твого рівня англіскої експертом
+                                Аналіз твого рівня англійскої експертом
                             </li>
                             <li className={style.benefit}>
                                 Демонстрація процессу навчання (виконаємо 2 круті вправи)
