@@ -48,7 +48,7 @@ export const PLANS_DETAILS = [
             {
                 subtitle: 'З Вікторією',
                 items: [1, 4, 8, 10],
-                price: 700
+                price: 1000
             },
             {
                 subtitle: 'З викладачем',
