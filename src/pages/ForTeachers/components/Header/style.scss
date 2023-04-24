@@ -1,10 +1,33 @@
 .header {
+
   .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    @include container;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 175px;
+    margin-bottom: 180px;
+
+    .content {
+      margin-right: 70px;
+
+      .title {
+        @include title;
+        font-family: var(--primary-text-font);
+        color: var(--primary-text-color);
+        margin-bottom: 20px;
+      }
+
+      .subtitle {
+        @include desc;
+        font-family: var(--secondary-text-font);
+        color: var(--secondary-text-color);
+        margin-bottom: 50px;
+      }
+
+      .button {
+        width: 266px;
+      }
+    }
   }
 }
