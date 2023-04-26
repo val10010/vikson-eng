@@ -1,3 +1,4 @@
+import { smoothScrollTo } from 'Utils';
 import Burger from 'Components/Burger';
 import { Link } from 'react-router-dom';
 import Button from 'Components/Button';
@@ -13,7 +14,7 @@ const Mobile = ({ children, isShowPlanBtn = false }) => {
 
     const handlePlanBtnClick = useCallback(() => {
         setActive(false);
-        window.location.hash = `#plan`;
+        smoothScrollTo('plans');
     }, []);
 
     return (

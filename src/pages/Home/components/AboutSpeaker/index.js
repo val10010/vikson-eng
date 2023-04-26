@@ -14,9 +14,10 @@ const AboutSpeaker = () => {
            <div className={style.content}>
                <h3 className={style.title}>Про спікера</h3>
                <p className={style.desc}>
-                   Я усвідомила що вчити інших людей - it's
-                   my cup of tea, коли побачила скільки років люди витрачають марно,
-                   так і не навчившись говорити бажанною мовою
+                   Вікторія, дипломований викладач іноземних мов. <br/>
+                   Я усвідомила, що вчити інших людей – it's my cup of tea,
+                   коли побачила скільки років люди витрачають марно,
+                   так і не навчившись говорити бажаною мовою
                </p>
                {isMobile && <Image src='../../images/home/hero_speaker.png' className={style.hero}/> }
                <ul className={style.facts}>

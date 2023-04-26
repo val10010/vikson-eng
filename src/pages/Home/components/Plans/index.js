@@ -1,7 +1,5 @@
 import { useDispatch } from 'react-redux';
 import * as actions from 'Actions/actions';
-import { useSmoothScrollToHash } from 'Hooks';
-import { useLocation } from 'react-router-dom';
 import TariffPlan from 'Components/TariffPlan';
 import PlanDetails from 'Components/PlanDetails';
 import React, {useCallback, useState} from 'react';
@@ -10,11 +8,9 @@ import { PLANS, PLANS_CHILDREN, PLANS_DETAILS } from './constants';
 import style from './style.scss';
 
 const Plans = () => {
-    const [planNumber, setPlanNumber] = useState(null);
-    const location = useLocation();
     const dispatch = useDispatch();
+    const [planNumber, setPlanNumber] = useState(null);
 
-    useSmoothScrollToHash(location.hash);
 
     const handleBtnClick = useCallback(() => {
         dispatch(actions.showPopup({
@@ -36,7 +32,7 @@ const Plans = () => {
 
     return (
         <>
-            <section className={style.container} id="plan">
+            <section className={style.container} id="plans">
                 <h3 className={style.title}>ТАРИФИ / НАВЧАННЯ</h3>
                 <div className={style.plansWrapper}>
                     {
