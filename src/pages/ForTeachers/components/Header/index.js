@@ -25,7 +25,7 @@ const Header = () => {
                     </h3>
                     <Button className={style.button}>почати навчання</Button>
                 </div>
-                <Image src="../../../../images/forTeacher/header_hero.jpg" alt="English teacher" />
+                <Image className={style.img} src="../../../../images/forTeacher/header_hero.jpg" alt="English teacher" />
             </div>
         </header>
     );

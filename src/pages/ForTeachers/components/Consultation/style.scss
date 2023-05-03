@@ -1,0 +1,91 @@
+.container {
+  @include container;
+  margin-bottom: 170px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mobile {
+    margin-bottom: 80px;
+  }
+}
+
+.title {
+  font-family: var(--primary-text-font);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--primary-text-font);
+  text-align: left;
+  @include title;
+}
+
+.content {
+  width: 100%;
+  max-width: 600px;
+  margin: 70px 60px 0 0;
+
+  @include mobile {
+    margin: 40px 0 0 0;
+    max-width: 100%;
+  }
+
+  .subtitle {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    margin-bottom: 20px;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  .benefits {
+    list-style-image: url('../../../../images/home/checkmark.svg');
+    padding-left: 20px;
+    margin-bottom: 30px;
+
+    @include  mobile {
+      margin-bottom: 42px;
+    }
+
+    .benefit {
+      padding-bottom: 10px;
+      font-family: var(--secondary-text-font);
+      font-weight: 400;
+      color: var(--secondary-text-color);
+      @include desc;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.form {
+  margin-top: 80px;
+}
+
+.popup {
+  .form {
+    margin-top: 0;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.highlightedText {
+  color: var(--highlighted-text-color);
+}
+
+.button {
+  margin-bottom: 40px;
+}

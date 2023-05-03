@@ -2,9 +2,19 @@ import React from 'react';
 
 import style from './style.scss';
 
-const TariffPlan = ({ className, number, title, subtitle, desc, modifier, id, onClick }) => {
+const TariffPlan = ({
+        id,
+        desc,
+        title,
+        number,
+        onClick,
+        subtitle,
+        modifier = '',
+        className = ''
+    }) => {
+
     return (
-        <div className={`${style.container} ${className || ''} ${style[modifier] || ''}`}>
+        <div className={`${style.container} ${className} ${style[modifier]}`}>
             <p className={style.number}>
                 { number }
             </p>
