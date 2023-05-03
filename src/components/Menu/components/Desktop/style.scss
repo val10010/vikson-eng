@@ -1,7 +1,7 @@
 .menu {
   @include container;
   display: flex;
-  padding: 20px 0;
+  padding: 17px 0;
   font-family: var(--secondary-text-font);
   font-weight: 400;
   font-size: 16px;
@@ -33,5 +33,14 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .button {
+    width: max-content;
+    height: 30px;
+    font-size: 13px;
+    padding: 0 20px;
+    position: relative;
+    right: 30px;
   }
 }

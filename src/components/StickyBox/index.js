@@ -1,5 +1,5 @@
-import React, {cloneElement, useEffect, useState, useRef, Children, useContext} from 'react';
 import { DeviceContext } from 'Contexts/Device/DeviceContext';
+import React, {cloneElement, useEffect, useState, useRef, Children, useContext} from 'react';
 
 import style from './style.scss';
 
@@ -36,27 +36,14 @@ const StickyBox = ({ children, menuItems }) => {
         };
     }, [activeIndex]);
 
-    useEffect(() => {
-        const hash = window.location.hash.substring(1);
-        const index = menuItems.findIndex((item) => item.hash === hash);
-
-        if (index !== -1) {
-            setActiveIndex(index);
-            contentRefs.current[index].scrollIntoView({ behavior: 'smooth' });
-        }
-    }, [menuItems]);
-
     const handleMenuItemClick = (index) => {
         setActiveIndex(index);
         const itemsHeight = isDesktop ? 0 : itemsRef.current?.offsetHeight + 2 || 0;
         const targetPosition = contentRefs.current[index].offsetTop - itemsHeight;
 
         window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth',
+            top: targetPosition
         });
-
-        window.location.hash = `#${menuItems[index].hash}`;
     };
 
     return (
