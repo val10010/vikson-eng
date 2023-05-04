@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useId } from 'react';
 import { buildClassName } from 'Utils'
 
 import style from './style.scss';
@@ -11,6 +11,8 @@ const RadioButton = forwardRef((
     },
     ref) => {
 
+    const ID = useId();
+
     return (
         <div
             className={
@@ -20,7 +22,7 @@ const RadioButton = forwardRef((
             }
         >
             <input
-                id={id}
+                id={ID}
                 ref={ref}
                 type="radio"
                 name={registerProps.name}
@@ -28,7 +30,7 @@ const RadioButton = forwardRef((
                 { ...props }
                 { ...registerProps }
             />
-            <label htmlFor={id}>{ value }</label>
+            <label htmlFor={ID}>{ value }</label>
 
             <span className={style.errorMessage}>{ isError }</span>
         </div>

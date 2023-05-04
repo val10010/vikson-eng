@@ -1,15 +1,35 @@
-import Popup from 'Components/Popup';
 import Toggle from 'Components/Toggle';
 import Button from 'Components/Button';
-import React, { useContext, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import * as actions from 'Actions/actions';
+import React, { useCallback, useContext } from 'react';
 import ReservationForm from 'Components/ReservationForm';
 import { DeviceContext } from 'Contexts/Device/DeviceContext';
 
 import style from './style.scss';
 
 const Consultation = () => {
-    const [isShowPopup, setShowPopup ] = useState(false);
+    const dispatch = useDispatch();
     const { isDesktop } = useContext(DeviceContext);
+
+    const handleBtnClick = useCallback(() => {
+        dispatch(actions.showPopup({
+            contents: [{
+                name: 'ReservationForm',
+                props: {
+                    className: style.formInPopup,
+                    btnonclick: {
+                        actionName: 'showPopup',
+                        props: {
+                            contents: [{
+                                name: 'Success'
+                            }]
+                        }
+                    }
+                }
+            }]
+        }))
+    }, []);
 
     return (
         <>
@@ -38,7 +58,7 @@ const Consultation = () => {
                             !isDesktop
                             && <Button
                                 className={style.button}
-                                onClick={() => setShowPopup(true)}
+                                onClick={handleBtnClick}
                             >
                                 записатись
                             </Button>
@@ -56,16 +76,6 @@ const Consultation = () => {
                     {isDesktop && <ReservationForm className={style.form}/>}
                 </div>
             </section>
-            {
-                !isDesktop
-                    && <Popup
-                         isOpen={isShowPopup}
-                         className={style.popup}
-                         onClose={() => setShowPopup(false)}
-                       >
-                         <ReservationForm className={style.form}/>
-                       </Popup>
-            }
         </>
     );
 };

@@ -1,0 +1,25 @@
+.container {
+  @include container;
+  margin-bottom: 170px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mobile {
+    margin-bottom: 80px;
+  }
+
+  .title {
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+    @include title;
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+}

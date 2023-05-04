@@ -9,7 +9,7 @@ import RadioButton from 'Components/RadioButton';
 
 import style from './style.scss';
 
-export const CallbackForm = ({ fromPage = 'зі сторінки учнів', btnOnClick }) => {
+export const OrderForm = ({ fromPage = '', productName, btnOnClick }) => {
     const {
         register,
         handleSubmit,
@@ -19,7 +19,8 @@ export const CallbackForm = ({ fromPage = 'зі сторінки учнів', bt
 
     const onSubmit = async (data) => {
         const res =  await innerServices.sendUserData({
-            formName: 'Форма зворотного зв\'язку',
+            formName: 'Форма замовлення',
+            productName,
             fromPage,
             ...data
         });
@@ -33,7 +34,7 @@ export const CallbackForm = ({ fromPage = 'зі сторінки учнів', bt
     return (
         <>
             <form onSubmit={handleSubmit(onSubmit)}  className={style.form} >
-                <h4 className={style.title}>Форма зворотного зв'язку</h4>
+                <h4 className={style.title}>Форма замовлення</h4>
                 <div className={style.content}>
                     <div className={style.block}>
                         <TextInput
@@ -51,14 +52,17 @@ export const CallbackForm = ({ fromPage = 'зі сторінки учнів', bt
                                 </div>
                             )}
                             <RadioButton
+                                id="TelegramId"
                                 value="Telegram"
                                 registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
                             />
                             <RadioButton
+                                id="ViberId"
                                 value="Viber"
                                 registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
                             />
                             <RadioButton
+                                id="WhatsAppId"
                                 value="WhatsApp"
                                 registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
                             />
@@ -73,33 +77,10 @@ export const CallbackForm = ({ fromPage = 'зі сторінки учнів', bt
                             })}
                         />
                         <Textarea
-                            placeholder="Ціль навчання*"
+                            placeholder="Ціль навчання"
                             isError={errors?.purpose?.message}
                             isValid={touchedFields?.purpose && !errors?.purpose && dirtyFields.purpose}
-                            {...register('purpose', { required: 'Заповнить це поле' })}
-                        />
-                    </div>
-                    <div className={style.block}>
-                        <p className={style.radioBtnsTitle}>Чи є досвід вивченная англійскої мови?*</p>
-                        <div className={style.radioBtns}>
-                            {errors?.experience?.message && (
-                                <div className={style.errorMessage}>
-                                    { errors.experience.message }
-                                </div>
-                            )}
-                            <RadioButton
-                                value="так"
-                                className={style.radioBtn}
-                                registerProps={register('experience', { required: 'Це поле обов\'язкове' })}
-                            />
-                            <RadioButton
-                                value="ні"
-                                registerProps={register('experience', { required: 'Це поле обов\'язкове' })}
-                            />
-                        </div>
-                        <Textarea
-                            placeholder="Коментар"
-                            {...register('comment')}
+                            {...register('purpose')}
                         />
                         <Checkbox
                             className={style.checkbox}
@@ -107,10 +88,9 @@ export const CallbackForm = ({ fromPage = 'зі сторінки учнів', bt
                             registerProps={register('consent', { required: 'Це поле обов\'язкове' })}
                         >
                             даю згоду на обробку своїх персональних даних.
-                            Підтверджую, що ознайомлений з Політикою обробки персональних даних
+                            Підтверджую, що ознайомлений з Політикою обробки персональних даних*
                         </Checkbox>
                     </div>
-
                 </div>
                 <Button
                     variant="primary"
@@ -125,4 +105,4 @@ export const CallbackForm = ({ fromPage = 'зі сторінки учнів', bt
     );
 };
 
-export default CallbackForm;
+export default OrderForm;

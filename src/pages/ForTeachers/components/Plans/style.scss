@@ -1,0 +1,148 @@
+.container {
+  @include container;
+
+  .title {
+    @include title;
+    font-family: var(--primary-text-font);
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--primary-text-color);
+    margin-bottom: 30px;
+
+    @include tabletMobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  .descBlock {
+    display: flex;
+    @include desc;
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    color: var(--secondary-text-color);
+    margin-bottom: 80px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+
+    .descFirst {
+      max-width: 780px;
+      margin-right: 60px;
+
+      @include mobile {
+        margin-right: 0;
+      }
+    }
+
+    .descSecond {
+      max-width: 360px;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 150px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 340px;
+    background: var(--secondary-bg-color);
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    @include tablet {
+      height: 217px;
+    }
+
+    @include mobile {
+      height: 700px;
+    }
+  }
+
+  .plan {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin-right: 80px;
+
+    @include tablet {
+      margin-right: 40px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .planTitle {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 130%;
+      font-family: var(--primary-text-font);
+      color: var(--primary-text-color);
+      margin-bottom: 20px;
+      height: 100px;
+
+      @include tabletMobile {
+        font-size: 25px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .planDesc {
+      font-family: var(--secondary-text-font);
+      color: var(--secondary-text-color);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+
+      @include tabletMobile {
+        font-size: 13px;
+      }
+
+      .subDesc {
+        margin-bottom: 10px;
+
+        @include tabletMobile {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+.highlightedText {
+  color: var(--highlighted-text-color);
+}
+
+.formInPopup {
+  margin-top: 0;
+  box-shadow: none;
+  border: none;
+}
+

@@ -1,0 +1,232 @@
+.container {
+  @include container;
+  text-align: center;
+  margin-bottom: 190px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mobile {
+    margin-bottom: 80px;
+  }
+
+  .title {
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 28px;
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 39px;
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      background: url('../../../../images/forTeacher/first.svg') no-repeat;
+      height: 70px;
+      width: 41px;
+      display: block;
+      margin: 0 auto 30px;
+    }
+  }
+
+  .content {
+    padding: 70px 0 30px;
+    position: relative;
+
+    @include mobile {
+      padding: 40px 0 10px;
+    }
+
+    &:before {
+      content: '';
+      border: 1px dashed #5259FF;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, 0);
+      height: 100%;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .block {
+        text-align: left;
+
+        &:first-child {
+          width: 375px;
+          padding-right: 45px;
+          position: relative;
+
+          @include mobile {
+            padding-right: 0;
+            display: flex;
+            flex-direction: column-reverse;
+            max-width: 375px;
+            width: 100%;
+          }
+
+          &:after {
+            content: '';
+            background: #F8FFE9;
+            border: 1px solid #5259FF;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            border-radius: 50%;
+            right: -5.5px;
+            top: 5px;
+
+            @include mobile {
+              display: none;
+            }
+          }
+        }
+        &:last-child {
+          width: 375px;
+          padding-left: 45px;
+
+          @include mobile {
+            padding-left: 0;
+            max-width: 375px;
+            width: 100%;
+          }
+        }
+
+        .itemTitle {
+          font-family: var(--primary-text-font);
+          color: var(--primary-text-color);
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 24px;
+
+          @include mobile {
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 30px;
+          }
+        }
+
+        .img {
+          border-radius: 15px;
+          margin-top: 20px;
+
+          @include mobile {
+            margin-top: 0;
+            margin-bottom: 30px;
+          }
+        }
+
+        .list {
+          margin-left: 0;
+
+          .item {
+            position: relative;
+            text-indent: initial;
+            margin-bottom: 70px;
+
+            @include mobile {
+              font-size: 16px;
+              margin-bottom: 60px;
+
+              &:last-child {
+                margin-bottom: 40px;
+              }
+            }
+
+            &:first-child {
+              margin-top: 40px;
+            }
+
+            &:before {
+              content: counter(item);
+              color: #fff;
+              background: #5259FF;
+              border-radius: 5px;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 140%;
+              font-family: var(--primary-text-font);
+              position: absolute;
+              top: -39px;
+              width: 25px;
+              height: 25px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .final {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--primary-text-color);
+    padding: 54px 64px;
+    width: 500px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #5259FF;
+    background: var(--primary-bg-color);
+    top: 1px;
+
+    @include mobile {
+      height: 90px;
+      width: calc(100%  - 16px);
+      max-width: 350px;
+      font-size: 18px;
+      line-height: 140%;
+      padding: 32.5px 38px;
+      position: relative;
+      right: 8px;
+    }
+
+    &:before {
+      content: '';
+      width: 500px;
+      height: 150px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border: 1px solid #5259FF;
+      border-radius: 10px;
+      z-index: -1;
+
+      @include mobile {
+        height: 90px;
+        width: 100%;
+        top: 12px;
+        left: 12px;
+      }
+    }
+  }
+}
+
+.highlightedText {
+  color: var(--highlighted-text-color);
+}
