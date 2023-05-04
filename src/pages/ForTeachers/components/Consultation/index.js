@@ -1,74 +1,74 @@
-import Popup from 'Components/Popup';
+import { LIST } from './constants';
 import Button from 'Components/Button';
-import React, { useContext, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import * as actions from 'Actions/actions';
+import React, { useCallback, useContext } from 'react';
 import ReservationForm from 'Components/ReservationForm';
 import { DeviceContext } from 'Contexts/Device/DeviceContext';
 
 import style from './style.scss';
 
 const Consultation = () => {
-    const [isShowPopup, setShowPopup ] = useState(false);
+    const dispatch = useDispatch();
     const { isDesktop } = useContext(DeviceContext);
 
-    return (
-        <>
-            <section className={style.container}>
-                <h3 className={style.title}>ОСОБИСТА КОНСУЛЬТАЦІЯ</h3>
-                <div className={style.wrapper}>
-                    <div className={style.content}>
-                        <p className={style.subtitle}>
-                            За <span className={style.highlightedText}>70-90 хв</span> зі мною ти отримаєш:
-                        </p>
-                        <ul className={style.benefits}>
-                            <li className={style.benefit}>
-                                Розберемо всі проблемні точки викладання
-                            </li>
-                            <li className={style.benefit}>
-                                Правильне позиціонування перед студентами
-                            </li>
-                            <li className={style.benefit}>
-                                Як делегувати,зібрати команду і на яких умовах
-                            </li>
-                            <li className={style.benefit}>
-                                Договір «викладач-студент» і його компоненти
-                            </li>
-                            <li className={style.benefit}>
-                                Облік студентів, як вести CRM
-                            </li>
-                            <li className={style.benefit}>
-                                Вигорання,причини і методи запобігання
-                            </li>
-                            <li className={style.benefit}>
-                                Як підвисити ціну
-                            </li>
-                            <li className={style.benefit}>
-                                Пошук клієнтів
-                            </li>
-                        </ul>
-                        {
-                            !isDesktop
-                            && <Button
-                                className={style.button}
-                                onClick={() => setShowPopup(true)}
-                            >
-                                записатись
-                            </Button>
+    const handleBtnClick = useCallback(() => {
+        dispatch(actions.showPopup({
+            contents: [{
+                name: 'ReservationForm',
+                props: {
+                    fromPage: 'зі сторінки вчителів',
+                    price: '1800 грн. / 48$',
+                    className: style.formInPopup,
+                    btnonclick: {
+                        actionName: 'showPopup',
+                        props: {
+                            contents: [{
+                                name: 'Success'
+                            }]
                         }
-                    </div>
-                    {isDesktop && <ReservationForm className={style.form}/>}
+                    }
+                }
+            }]
+        }))
+    }, []);
+
+    return (
+        <section className={style.container}>
+            <h3 className={style.title}>ОСОБИСТА КОНСУЛЬТАЦІЯ</h3>
+            <div className={style.wrapper}>
+                <div className={style.content}>
+                    <p className={style.subtitle}>
+                        За <span className={style.highlightedText}>70-90 хв</span> зі мною ти отримаєш:
+                    </p>
+                    <ul className={style.benefits}>
+                        {
+                            LIST.map(item => (
+                                <li key={item} className={style.benefit}>
+                                    { item }
+                                </li>
+                            ))
+                        }
+                    </ul>
+                    {
+                        !isDesktop
+                        && <Button
+                            className={style.button}
+                            onClick={handleBtnClick}
+                        >
+                            записатись
+                        </Button>
+                    }
                 </div>
-            </section>
-            {
-                !isDesktop
-                    && <Popup
-                         isOpen={isShowPopup}
-                         className={style.popup}
-                         onClose={() => setShowPopup(false)}
-                       >
-                         <ReservationForm className={style.form}/>
-                       </Popup>
-            }
-        </>
+                {isDesktop
+                    && <ReservationForm
+                          className={style.form}
+                          price="1800 грн. / 48$"
+                          fromPage="зі сторінки вчителів"
+                        />
+                }
+            </div>
+        </section>
     );
 };
 

@@ -24,8 +24,8 @@ const PopupManager = () => {
                         props: {
                             ...item.props,
                             ...item.props?.btnonclick && {
-                                btnonclick: () =>
-                                    dispatch(actions[item.props.btnonclick.actionName](item.props.btnonclick.props))
+                               btnonclick: () =>
+                                 dispatch(actions[item.props.btnonclick.actionName](item.props.btnonclick.props))
                             }
                         }
                     })

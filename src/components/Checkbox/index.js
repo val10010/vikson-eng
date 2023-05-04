@@ -1,9 +1,11 @@
 import { buildClassName } from 'Utils'
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useId } from 'react';
 
 import style from './style.scss';
 
 const Checkbox = forwardRef(({ className, classNames = {}, children, registerProps, isError }, ref) => {
+    const ID = useId();
+
     return (
        <div
            className={
@@ -16,12 +18,12 @@ const Checkbox = forwardRef(({ className, classNames = {}, children, registerPro
                <input
                    ref={ref}
                    type="checkbox"
-                   id={registerProps.name}
+                   id={registerProps.name + ID}
                    { ...registerProps }
                />
                <span className={style.checkbox} />
            </div>
-           <label htmlFor={registerProps.name} className={`${style.label}`}>
+           <label htmlFor={registerProps.name + ID} className={`${style.label}`}>
                { children }
            </label>
            <span className={style.errorMessage}>{ isError }</span>

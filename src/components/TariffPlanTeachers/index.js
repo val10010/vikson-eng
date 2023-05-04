@@ -4,8 +4,10 @@ import Button from 'Components/Button';
 import style from './style.scss';
 
 const TariffPlanTeacher = ({
+        id,
         price,
         number,
+        onClick,
         children,
         className = ''
     }) => {
@@ -20,7 +22,12 @@ const TariffPlanTeacher = ({
                 ціна:
                 <p className={style.price}>{ price }</p>
             </div>
-            <Button className={style.button}>ПРИДБАТИ</Button>
+            <Button
+                onClick={() => onClick(id)}
+                className={style.button}
+            >
+                ПРИДБАТИ
+            </Button>
         </div>
     );
 };

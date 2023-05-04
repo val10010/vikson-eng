@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { lazy } from 'react';
 
-import Plans from './components/Plans';
-import Header from './components/Header';
-import Reviews from './components/Reviews';
-import LifeStory from './components/LifeStory';
-import Consultation from './components/Consultation';
-import Transformation from './components/Transformation';
+const Plans = lazy(() => import('./components/Plans'));
+const Header = lazy(() => import('./components/Header'));
+const Reviews = lazy(() => import('./components/Reviews'));
+const LifeStory = lazy(() => import('./components/LifeStory'));
+const Consultation = lazy(() => import('./components/Consultation'));
+const Transformation = lazy(() => import('./components/Transformation'));
 
 const ForTeachers = () => {
     return (

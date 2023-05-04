@@ -11,7 +11,7 @@ import RadioButton from 'Components/RadioButton';
 
 import style from './style.scss';
 
-const ReservationForm = ({ className }) => {
+export const ReservationForm = ({ fromPage  = 'зі сторінки учнів', price = '350 грн. / 10$', className }) => {
     const dispatch = useDispatch();
     const {
         register,
@@ -24,6 +24,7 @@ const ReservationForm = ({ className }) => {
     const onSubmit = async (data) => {
        const res =  await innerServices.sendUserData({
            formName: 'БРОНЮВАННЯ',
+           fromPage,
            ...data
        });
 
@@ -56,17 +57,14 @@ const ReservationForm = ({ className }) => {
                         </div>
                     )}
                     <RadioButton
-                        id="Telegram"
                         value="Telegram"
                         registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
                     />
                     <RadioButton
-                        id="Viber"
                         value="Viber"
                         registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
                     />
                     <RadioButton
-                        id="WhatsApp"
                         value="WhatsApp"
                         registerProps={register('messenger', { required: 'Це поле обов\'язкове' })}
                     />
@@ -98,7 +96,7 @@ const ReservationForm = ({ className }) => {
                 </Checkbox>
                 <div className={style.total}>
                     <span>Усього:</span>
-                    <span className={style.price}>350 грн. / 10$</span>
+                    <span className={style.price}>{ price }</span>
                 </div>
             </form>
         </>

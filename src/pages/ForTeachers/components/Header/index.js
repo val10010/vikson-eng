@@ -1,12 +1,37 @@
-import React from 'react';
 import Menu from 'Components/Menu';
 import Image from 'Components/Image';
+import Button from 'Components/Button';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import React, { useCallback } from 'react';
+import * as actions from 'Actions/actions';
 
 import style from './style.scss';
-import Button from "Components/Button";
 
 const Header = () => {
+    const dispatch = useDispatch();
+
+    const handleBtnClick = useCallback(() => {
+        dispatch(actions.showPopup({
+            contents: [{
+                name: 'ReservationForm',
+                props: {
+                    price: '1800 грн. / 48$',
+                    className: style.formInPopup,
+                    fromPage: 'зі сторінки вчителів',
+                    btnonclick: {
+                        actionName: 'showPopup',
+                        props: {
+                            contents: [{
+                                name: 'Success'
+                            }]
+                        }
+                    }
+                }
+            }]
+        }))
+    }, []);
+
     return (
         <header className={style.header}>
             <Menu isShowPlanBtn={true}>
@@ -21,9 +46,15 @@ const Header = () => {
                     <h3 className={style.subtitle}>
                         Наша місія - поширювати хороші практики навчання серед викладачів,
                         в результі чого мати велику кількість людей, які дійсно добилися результатів.
-                        Саме тому в нас є особиста программа навчання окермо для викладачів у формі інтенсивів та ообистих консультації від експерта у сфері навчання англійскої мови.
+                        Саме тому в нас є особиста програма навчання окремо для викладачів у формі інтенсивів
+                        та ообистих консультацій від експерта у сфері навчання англійскої мови.
                     </h3>
-                    <Button className={style.button}>почати навчання</Button>
+                    <Button
+                        className={style.button}
+                        onClick={handleBtnClick}
+                    >
+                        почати навчання
+                    </Button>
                 </div>
                 <Image className={style.img} src="../../../../images/forTeacher/header_hero.jpg" alt="English teacher" />
             </div>
