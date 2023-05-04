@@ -1,0 +1,53 @@
+.container {
+  padding: 50px;
+  @include container;
+  font-weight: 400;
+  @include desc;
+  font-family: var(--secondary-text-font);
+  color: var(--secondary-text-color);
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  .title {
+    @include title;
+    color: var(--primary-text-color);
+    font-family: var(--primary-text-font);
+    margin-bottom: 50px;
+    font-weight: 400;
+  }
+
+  .content {
+    max-width: 700px;
+
+    .desc {
+      @include desc;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      color: var(--primary-text-color);
+      font-size: 20px;
+      line-height: 140%;
+      font-weight: 500;
+      margin: 30px 0 16px;
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    .list {
+      list-style: initial;
+      padding-left: 25px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.highlightedText {
+  color: var(--highlighted-text-color);
+}

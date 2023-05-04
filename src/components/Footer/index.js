@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className={style.footer} >
             <div className={style.container}>
                 <Link to='/' className={style.logo}>VIKSON.ENG</Link>
-                <Link to='/' className={style.item}>Політика конфідеційності</Link>
+                <Link to='/privacy-policy' target="_blank" className={style.item}>Політика конфідеційності</Link>
                 <div className={style.contacts}>
                     <p className={style.title}>Контакти</p>
                     <Link to='mailto:support@vikson-eng.com' className={style.item}>support@vikson-eng.com</Link>
