@@ -122,3 +122,22 @@
     display: block;
   }
 }
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: url('../../images/cross.svg') no-repeat;
+  background-size: contain;
+  width: 23px;
+  height: 23px;
+  border: none;
+
+  @include mobile {
+    height: 13px;
+    width: 13px;
+    top: 11px;
+    right: 13px;
+  }
+}

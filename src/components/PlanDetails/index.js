@@ -52,6 +52,8 @@ const PlanDetails = ({ isOpen, onClose, onBtnClick, className, details, id }) =>
                 >
                     навчатись
                 </Button>
+                <button className={style.close} onClick={onClose}>
+                </button>
             </div>
         </div>
     );
