@@ -30,32 +30,29 @@ const Header = () => {
     }, [])
 
     return (
-        <>
-            <header className={style.header}>
-                <Menu isShowPlanBtn={true}>
-                    <Link to='/for-teachers'>Викладачам</Link>
-                    <Link to='#'>Вакансії</Link>
-                </Menu>
-
-                <div className={style.container}>
-                    <div className={style.content}>
-                        <h1 className={style.title}>ДОСІ НЕ СПІК ІНГЛІШ?</h1>
-                        <h3 className={style.desc}>
-                            В школі англійську вивчали 60% людей, ще 30% відвідували індивідуальні заняття,
-                            і лише 10% вивчали мову правильно, це дозволило їм зараз вільно володіти Інглішом.
-                        </h3>
-                        <Button
-                            variant="primary"
-                            className={style.button}
-                            onClick={handleBtnClick}
-                        >
-                            почати навчання
-                        </Button>
-                    </div>
-                    <Image src='../../images/home/hero_main.png' alt="hero" className={style.hero}/>
+        <header className={style.header}>
+            <Menu isShowPlanBtn={true}>
+                <Link to='/for-teachers'>Викладачам</Link>
+                <Link to='/vacancies'>Вакансії</Link>
+            </Menu>
+            <div className={style.container}>
+                <div className={style.content}>
+                    <h1 className={style.title}>ДОСІ НЕ СПІК ІНГЛІШ?</h1>
+                    <h3 className={style.desc}>
+                        В школі англійську вивчали 60% людей, ще 30% відвідували індивідуальні заняття,
+                        і лише 10% вивчали мову правильно, це дозволило їм зараз вільно володіти Інглішом.
+                    </h3>
+                    <Button
+                        variant="primary"
+                        className={style.button}
+                        onClick={handleBtnClick}
+                    >
+                        почати навчання
+                    </Button>
                 </div>
-            </header>
-        </>
+                <Image src='../../images/home/hero_main.png' alt="hero" className={style.hero}/>
+            </div>
+        </header>
     );
 };
 

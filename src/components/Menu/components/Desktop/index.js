@@ -5,7 +5,7 @@ import React, { useCallback } from 'react';
 
 import style from './style.scss';
 
-const Desktop = ({ children }) => {
+const Desktop = ({ children, isShowPlanBtn }) => {
     const handlePlanBtnClick = useCallback(() => {
         smoothScrollTo('plans');
     }, []);
@@ -23,7 +23,7 @@ const Desktop = ({ children }) => {
                 </div>
             }
             <div>
-                <Button onClick={handlePlanBtnClick} className={style.button}>обрати тариф навчання</Button>
+                { isShowPlanBtn && <Button onClick={handlePlanBtnClick} className={style.button}>обрати тариф навчання</Button> }
                 <Link to='tel:+(380) 98 6 000 884' className={style.phoneNumber}> +(380) 98 6 000 884 </Link>
             </div>
         </nav>

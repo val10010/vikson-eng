@@ -9,7 +9,7 @@ import RadioButton from 'Components/RadioButton';
 
 import style from './style.scss';
 
-export const CallbackForm = ({ fromPage = 'зі сторінки учнів', btnOnClick }) => {
+export const RecordForInterview = ({ fromPage = 'зі сторінки вакансий', vacancyName, btnOnClick }) => {
     const {
         register,
         handleSubmit,
@@ -19,7 +19,8 @@ export const CallbackForm = ({ fromPage = 'зі сторінки учнів', bt
 
     const onSubmit = async (data) => {
         const res =  await innerServices.sendUserData({
-            formName: 'Форма зворотного зв\'язку',
+            formName: 'Запис на співбесіду',
+            vacancyName,
             fromPage,
             ...data
         });
@@ -33,7 +34,7 @@ export const CallbackForm = ({ fromPage = 'зі сторінки учнів', bt
     return (
         <>
             <form onSubmit={handleSubmit(onSubmit)}  className={style.form} >
-                <h4 className={style.title}>Форма зворотного зв'язку</h4>
+                <h4 className={style.title}>Запис на співбесіду</h4>
                 <div className={style.content}>
                     <div className={style.block}>
                         <TextInput
@@ -72,34 +73,13 @@ export const CallbackForm = ({ fromPage = 'зі сторінки учнів', bt
                                 required: 'Заповнить це поле'
                             })}
                         />
-                        <Textarea
-                            placeholder="Ціль навчання*"
-                            isError={errors?.purpose?.message}
-                            isValid={touchedFields?.purpose && !errors?.purpose && dirtyFields.purpose}
-                            {...register('purpose', { required: 'Заповнить це поле' })}
-                        />
                     </div>
                     <div className={style.block}>
-                        <p className={style.radioBtnsTitle}>Чи є досвід вивченная англійської мови?*</p>
-                        <div className={style.radioBtns}>
-                            {errors?.experience?.message && (
-                                <div className={style.errorMessage}>
-                                    { errors.experience.message }
-                                </div>
-                            )}
-                            <RadioButton
-                                value="так"
-                                className={style.radioBtn}
-                                registerProps={register('experience', { required: 'Це поле обов\'язкове' })}
-                            />
-                            <RadioButton
-                                value="ні"
-                                registerProps={register('experience', { required: 'Це поле обов\'язкове' })}
-                            />
-                        </div>
                         <Textarea
-                            placeholder="Коментар"
-                            {...register('comment')}
+                            placeholder="Коментар, досвід, матеріали які використовуєте у роботі* "
+                            {...register('comment', {
+                                required: 'Заповнить це поле'
+                            })}
                         />
                         <Checkbox
                             className={style.checkbox}
@@ -125,4 +105,4 @@ export const CallbackForm = ({ fromPage = 'зі сторінки учнів', bt
     );
 };
 
-export default CallbackForm;
+export default RecordForInterview;

@@ -64,7 +64,7 @@ const Slider = ({ reviews }) => {
                                     <Image src={reviews[index]?.author?.imgPath} alt="author" />
                                     <div className={style.data}>
                                         <p className={style.name}>{ reviews[index]?.author?.info }</p>
-                                        <Link to={reviews[index]?.author?.link[0]} className={style.link} >
+                                        <Link to={reviews[index]?.author?.link[0]} target="_blank" className={style.link} >
                                             {reviews[index]?.author?.link[1]}
                                         </Link>
                                     </div>

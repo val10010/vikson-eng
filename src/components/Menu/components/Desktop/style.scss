@@ -30,6 +30,10 @@
     color: var(--primary-text-color);
     margin-right: 40px;
 
+    @include tablet {
+      margin-right: 10px;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -42,5 +46,9 @@
     padding: 0 20px;
     position: relative;
     right: 30px;
+
+    @include tablet {
+      right: 10px;
+    }
   }
 }

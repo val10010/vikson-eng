@@ -47,7 +47,7 @@ const Mobile = ({ children, isShowPlanBtn = false }) => {
                               </Button>
                         }
                         <div>
-                            <Link to="#"  className={style.link}>Політика конфідеційності</Link>
+                            <Link to="/privacy-policy" target="_blank" className={style.link}>Політика конфідеційності</Link>
                             <div className={style.footer}>
                                 <p>Контакти</p>
                                 <div>

@@ -10,7 +10,7 @@ const Menu = ({ children, isShowPlanBtn }) => {
     return (
         isMobile
             ? <Mobile isShowPlanBtn={isShowPlanBtn}>{ children }</Mobile>
-            : <Desktop>{ children }</Desktop>
+            : <Desktop isShowPlanBtn={isShowPlanBtn}>{ children }</Desktop>
     );
 };
 

@@ -1,0 +1,30 @@
+.container {
+  @include container;
+  margin-bottom: 110px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mobile {
+    margin-bottom: 80px;
+  }
+
+  .title {
+    @include title;
+    font-family: var(--primary-text-font);
+    color: #5259FF;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include tabletMobile {
+      flex-direction: column;
+    }
+  }
+}

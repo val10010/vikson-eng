@@ -1,0 +1,106 @@
+.container {
+  width: calc(50% - 20px);
+  margin: 0 20px 20px 0;
+  padding: 30px;
+  background: #FFFFFF;
+  border: 2px solid #BEBEBE;
+  border-radius: 20px;
+
+  @include tabletMobile {
+    width: 100%;
+    padding: 20px;
+  }
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .title {
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 84px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &:after {
+      content: '';
+      background: url('../../../../../../images/vacancies/globe.svg');
+      width: 38px;
+      height: 38px;
+      display: block;
+      margin-left: 10px;
+    }
+  }
+
+  .workType {
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 6px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  .cardBottom {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .experience {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      font-family: var(--primary-text-font);
+      color: var(--secondary-text-color);
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .button {
+      border: none;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: #5259FF;
+      padding: 0;
+      font-family: var(--primary-text-font);
+      display: flex;
+      align-items: center;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      &:after {
+        content: '';
+        background: url("../../../../../../images/vacancies/arrow.svg");
+        width: 60px;
+        height: 8px;
+        display: block;
+        margin-left: 14px;
+      }
+    }
+  }
+}

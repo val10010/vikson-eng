@@ -24,7 +24,7 @@ const Transformation = () => {
                 <div className={style.wrapper}>
                     <div className={style.block}>
                         <h5 className={style.itemTitle}>
-                            <span className={style.highlightedText}> 3 місяць </span> навчання на своїх помилках
+                            <span className={style.highlightedText}> 3 місяці </span> навчання на своїх помилках
                         </h5>
                     </div>
                     <div className={style.block}>
