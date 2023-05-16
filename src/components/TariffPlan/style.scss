@@ -73,22 +73,26 @@
 
     @include tabletMobile {
       font-size: 13px;
+      margin-bottom: 15px;
     }
   }
 
-  .details {
+  .price {
     cursor: pointer;
-    color: #5259FF;
     font-family: var(--primary-text-font);
-    text-decoration: underline;
     text-align: center;
-    margin-top: auto;
+    margin: auto auto 0;
     font-size: 20px;
     line-height: 24px;
+    font-weight: 500;
+    height: 43px;
+    width: 150px;
 
     @include tabletMobile {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 19px;
+      height: 30px;
+      width: 100px!important;
     }
   }
 }

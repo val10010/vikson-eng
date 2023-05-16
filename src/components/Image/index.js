@@ -10,7 +10,7 @@ const Image = ({ src, ...props }) => {
     return (
         <picture>
             <source srcSet={pathWithoutExtension + '.webp 1x,' + pathWithoutExtension + '@2x.webp 2x,' } type="image/webp"/>
-            <img srcSet={src + ' 1x,' + pathWithoutExtension + '@2x' + extension + ' 2x,' } {...props}/>
+            <img srcSet={src + ' 1x,' + pathWithoutExtension + '@2x' + extension + ' 2x,' } alt="vikson-eng.com" {...props}/>
         </picture>
     );
 };

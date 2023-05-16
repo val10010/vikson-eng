@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'Components/Button';
 
 import style from './style.scss';
 
@@ -27,12 +28,12 @@ const TariffPlan = ({
             <p className={style.desc}>
                 { desc }
             </p>
-            <div
+            <Button
                 onClick={() => onClick(id)}
-                className={style.details}
+                className={style.price}
             >
-                подробиці
-            </div>
+                ціни
+            </Button>
         </div>
     );
 };

@@ -8,7 +8,7 @@ import { DeviceContext } from 'Contexts/Device/DeviceContext';
 
 import style from './style.scss';
 
-const Consultation = () => {
+const TrialLesson = () => {
     const dispatch = useDispatch();
     const { isDesktop } = useContext(DeviceContext);
 
@@ -34,24 +34,30 @@ const Consultation = () => {
     return (
         <>
             <section className={style.container}>
-                <h3 className={style.title}>ОСОБИСТА КОНСУЛЬТАЦІЯ</h3>
+                <h3 className={style.title}>Пробний урок</h3>
                 <div className={style.wrapper}>
                     <div className={style.content}>
                         <p className={style.subtitle}>
-                            За <span className={style.highlightedText}>20 хв</span> зі мною ти отримаєш:
+                            За <span className={style.highlightedText}>40 хв</span> ти отримаєш:
                         </p>
                         <ul className={style.benefits}>
                             <li className={style.benefit}>
-                                Аналіз твого рівня англійської
+                                Знайомство зі своїм викладачем
                             </li>
                             <li className={style.benefit}>
-                                Демонстрація процесу навчання (виконаємо 2 круті вправи)
+                                Аналіз вашого рівня
                             </li>
                             <li className={style.benefit}>
-                                Розповідь про авторську систему навчання в <span className={style.highlightedText}>Miro</span>
+                                Ознайомлення з методом викладання
                             </li>
                             <li className={style.benefit}>
-                                Відповіді на всі твої запитання
+                                Відповіді на всі ваші запитання
+                            </li>
+                            <li className={style.benefit}>
+                                2 - 4 вправи на англійській мові
+                            </li>
+                            <li className={style.benefit}>
+                                Домашнє завдання
                             </li>
                         </ul>
                         {
@@ -64,12 +70,13 @@ const Consultation = () => {
                             </Button>
                         }
                         <Toggle>
-                            <div>Чому консультація платна?</div>
+                            <div>Чому пробний урок платний?</div>
                             <div>
-                                Вже півтора роки я проводжу особисті консультації,
-                                де розповідаю як легко та зручно освоїти бажаний рівень англійської.
-                                На жаль, в мене всього 24 години в добі. Цей час я використовую максимально продуктивно,
-                                надаючи корисні знання своїм клієнтам, які цього потребують. Саме тому консультація <span className={style.highlightedText}>платна</span>.
+                                Ми цінуємо час людей, даємо користь, аналізуємо ваш рівень.
+                                Викладачі розповідають як легко та зручно освоїти бажаний рівень англійської .
+                                На жаль в нас лише 24 години на добу, цей час ми використовуємо максимально продуктивно,
+                                надаючи корисні знання. Працюємо з людьми яких поважаємо , і котрі поважають нас.
+                                Саме тому пробний урок у нас <span className={style.highlightedText}>платний</span>.
                             </div>
                         </Toggle>
                     </div>
@@ -80,4 +87,4 @@ const Consultation = () => {
     );
 };
 
-export default Consultation;
+export default TrialLesson;

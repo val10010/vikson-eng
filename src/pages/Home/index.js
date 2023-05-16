@@ -6,15 +6,15 @@ const Header = lazy(() => import('./components/Header'));
 const Reviews = lazy(() => import('./components/Reviews'));
 const Learning = lazy(() => import('./components/Learning'));
 const Instagram = lazy(() => import('./components/Instagram'));
+const TrialLesson = lazy(() => import('./components/TrialLesson'));
 const AboutSpeaker = lazy(() => import('./components/AboutSpeaker'));
-const Consultation = lazy(() => import('./components/Consultation'));
 
 const Home = () => {
     return (
         <>
             <Header/>
             <AboutSpeaker/>
-            <Consultation/>
+            <TrialLesson/>
             <Learning/>
             <Plans/>
             <FAQ/>
