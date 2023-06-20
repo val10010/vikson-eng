@@ -18,7 +18,7 @@ const Consultation = () => {
                 name: 'ReservationForm',
                 props: {
                     fromPage: 'зі сторінки вчителів',
-                    price: '1800 грн. / 48$',
+                    price: '2400 грн. / 64$',
                     className: style.formInPopup,
                     btnonclick: {
                         actionName: 'showPopup',
