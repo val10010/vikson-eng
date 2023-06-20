@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import React, { useCallback } from 'react';
 import * as actions from 'Actions/actions';
+import { CONSULTATION_PRICE } from 'Main/constants';
 
 import style from './style.scss';
 
@@ -16,7 +17,7 @@ const Header = () => {
             contents: [{
                 name: 'ReservationForm',
                 props: {
-                    price: '1800 грн. / 48$',
+                    price: CONSULTATION_PRICE,
                     className: style.formInPopup,
                     fromPage: 'зі сторінки вчителів',
                     btnonclick: {

@@ -25,6 +25,7 @@ module.exports = {
                 Services: path.resolve(__dirname, 'src/services'),
                 Pages: path.resolve(__dirname, 'src/pages'),
                 Actions: path.resolve(__dirname, 'src/store'),
+                Main: path.resolve(__dirname, 'src/'),
             },
             extensions: [".js"]
         },

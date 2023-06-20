@@ -2,6 +2,7 @@ import { LIST } from './constants';
 import Button from 'Components/Button';
 import { useDispatch } from 'react-redux';
 import * as actions from 'Actions/actions';
+import { CONSULTATION_PRICE } from 'Main/constants';
 import React, { useCallback, useContext } from 'react';
 import ReservationForm from 'Components/ReservationForm';
 import { DeviceContext } from 'Contexts/Device/DeviceContext';
@@ -18,7 +19,7 @@ const Consultation = () => {
                 name: 'ReservationForm',
                 props: {
                     fromPage: 'зі сторінки вчителів',
-                    price: '2400 грн. / 64$',
+                    price: CONSULTATION_PRICE,
                     className: style.formInPopup,
                     btnonclick: {
                         actionName: 'showPopup',
@@ -63,7 +64,7 @@ const Consultation = () => {
                 {isDesktop
                     && <ReservationForm
                           className={style.form}
-                          price="1800 грн. / 48$"
+                          price={CONSULTATION_PRICE}
                           fromPage="зі сторінки вчителів"
                         />
                 }
