@@ -5,10 +5,10 @@ import Mobile from './components/Mobile';
 import Desktop from './components/Desktop';
 
 const Menu = ({ children, isShowPlanBtn }) => {
-    const { isMobile } = useContext(DeviceContext);
+    const { isMobile, isTablet } = useContext(DeviceContext);
 
     return (
-        isMobile
+        isMobile || isTablet
             ? <Mobile isShowPlanBtn={isShowPlanBtn}>{ children }</Mobile>
             : <Desktop isShowPlanBtn={isShowPlanBtn}>{ children }</Desktop>
     );

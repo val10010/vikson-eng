@@ -31,19 +31,31 @@ const PlanDetails = ({ isOpen, onClose, onBtnClick, className, details, id }) =>
                     }
                     {
                         details[id].blocks[1]
-                        && <div className={style.block}>
-                            { details[id].blocks[1].subtitle && <h5 className={style.subtitle}>{details[id].blocks[1].subtitle}</h5> }
-                            <ul className={style.list}>
-                                {
-                                    details[id].blocks[1].items.map(item => (
-                                        <li key={item} className={style.item}>
-                                            { item } заняття
-                                            <span className={style.price}>{ details[id].blocks[1].price * item } грн.</span>
-                                        </li>
-                                    ))
-                                }
-                            </ul>
-                        </div>
+                        &&  !details[id].blocks[1].isHidden
+                            ?
+                            <div className={style.block}>
+                                { details[id].blocks[1].subtitle && <h5 className={style.subtitle}>{details[id].blocks[1].subtitle}</h5> }
+                                <ul className={style.list}>
+                                    {
+                                        details[id].blocks[1].items.map(item => (
+                                            <li key={item} className={style.item}>
+                                                { item } заняття
+                                                <span className={style.price}>{ details[id].blocks[1].price * item } грн.</span>
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                             </div>
+                            :
+                            <div className={style.block}>
+                                <h5 className={style.subtitle}>Заняття з викладачем з команди від 350 грн</h5>
+                                <Button
+                                    href="/team"
+                                    className={style.btnTeam}
+                                >
+                                    обрати викладача
+                                </Button>
+                            </div>
                     }
                 </div>
                 <Button

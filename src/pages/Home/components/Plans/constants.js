@@ -53,7 +53,8 @@ export const PLANS_DETAILS = [
             {
                 subtitle: 'З викладачем',
                 items: [1, 4, 8, 10],
-                price: 350
+                price: 350,
+                isHidden: true
             }
         ]
     },
@@ -68,7 +69,8 @@ export const PLANS_DETAILS = [
             {
                 subtitle: 'З викладачем',
                 items: [1, 4, 8, 10],
-                price: 300
+                price: 300,
+                isHidden: true
             }
         ]
     },
@@ -83,7 +85,8 @@ export const PLANS_DETAILS = [
             {
                 subtitle: 'З викладачем',
                 items: [1, 4, 8, 10],
-                price: 250
+                price: 250,
+                isHidden: true
             }
         ]
     },

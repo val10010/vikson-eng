@@ -1,0 +1,120 @@
+.container {
+  @include container;
+  margin-bottom: 100px;
+
+  @include tabletMobile {
+    margin-bottom: 80px;
+  }
+
+  .title {
+    @include title;
+    margin-bottom: 24px;
+    color: var(--primary-text-color);
+  }
+
+  .desc {
+    @include desc;
+    margin-bottom: 53px;
+    max-width: 700px;
+    color: var(--secondary-text-color);
+  }
+
+  .slider {
+    display: flex;
+    justify-content: center;
+
+    .box {
+      position: relative;
+      margin-right: 41px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .sliderImgContainer {
+      width: 300px;
+      height: 320px;
+
+      @include mobile {
+        width: 250px;
+        height: 270px;
+        margin: 0 auto;
+      }
+
+      &:after {
+        content: '';
+        width: 280px;
+        height: 284px;
+        border: 1px solid #5259FF;
+        border-radius: 50%;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: -1;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      .sliderImg {
+        width: 280px;
+        height: 284px;
+        border-radius: 50%;
+
+        @include mobile {
+          width: 230px;
+          height: 234px;
+        }
+      }
+    }
+
+    .info {
+      width: 300px;
+      height: 230px;
+      border-radius: 30px;
+      border: 0.5px solid #616161;
+      background: #FFF;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        color: var(--primary-text-color)
+      }
+
+      .skill {
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        color: var(--secondary-text-color)
+      }
+
+      .price {
+        font-size: 20px;
+        font-style: normal;
+        line-height: 140%;
+        color: var(--primary-text-color);
+        margin-top: auto;
+
+        .bold {
+          font-weight: 500;
+          color: var(--highlighted-text-color);
+        }
+      }
+    }
+  }
+
+  .btn {
+    width: 266px;
+    height: 50px;
+    margin: 40px auto 0;
+    display: block;
+  }
+}

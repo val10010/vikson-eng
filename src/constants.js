@@ -1,1 +1,1 @@
-export const CONSULTATION_PRICE = '2400 грн. / 64$';
+export const CONSULTATION_PRICE = '2900 грн. / 80$';
