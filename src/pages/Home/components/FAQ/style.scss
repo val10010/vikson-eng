@@ -1,12 +1,8 @@
 .container {
   @include container;
-  margin-bottom: 440px;
+  margin-bottom: 140px;
 
-  @include tablet {
-    margin-bottom: 200px;
-  }
-
-  @include mobile {
+  @include tabletMobile {
     margin-bottom: 100px;
   }
 

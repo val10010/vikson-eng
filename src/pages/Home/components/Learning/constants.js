@@ -1,7 +1,7 @@
 export const ITEMS = [
     {
-        item: 'Онлайн зустріч із менеджером',
-        hash: 'onlineChat'
+        item: 'Аналіз вашого запиту',
+        hash: 'test'
     },
     {
        item: 'Знайомство з викладачем',

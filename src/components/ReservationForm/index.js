@@ -8,10 +8,11 @@ import Textarea from 'Components/Textarea';
 import Checkbox from 'Components/Checkbox';
 import TextInput from 'Components/TextInput';
 import RadioButton from 'Components/RadioButton';
+import { RESERVATION } from 'Main/constants';
 
 import style from './style.scss';
 
-export const ReservationForm = ({ fromPage  = 'зі сторінки учнів', price = '350 грн. / 10$', className }) => {
+export const ReservationForm = ({ fromPage  = 'зі сторінки учнів', price = RESERVATION, className }) => {
     const dispatch = useDispatch();
     const {
         register,

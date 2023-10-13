@@ -116,6 +116,7 @@ module.exports = {
             new CopyPlugin({
                 patterns: [
                     "robots.txt",
+                    "z93oevb9dbbyt28dje3zixpfpucquu.html",
                     { from: 'src/images', to: 'images' }
                 ],
             }),

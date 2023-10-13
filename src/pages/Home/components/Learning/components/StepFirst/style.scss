@@ -20,4 +20,12 @@
       font-size: 24px;
     }
   }
+
+  .item {
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+  }
 }

@@ -48,10 +48,11 @@ const PlanDetails = ({ isOpen, onClose, onBtnClick, className, details, id }) =>
                              </div>
                             :
                             <div className={style.block}>
-                                <h5 className={style.subtitle}>Заняття з викладачем з команди від 350 грн</h5>
+                                <h5 className={style.subtitle}>Заняття з викладачем з команди від 400 грн</h5>
                                 <Button
                                     href="/team"
                                     className={style.btnTeam}
+                                    variant="secondary"
                                 >
                                     обрати викладача
                                 </Button>

@@ -38,7 +38,7 @@ const TrialLesson = () => {
                 <div className={style.wrapper}>
                     <div className={style.content}>
                         <p className={style.subtitle}>
-                            За <span className={style.highlightedText}>40 хв</span> ти отримаєш:
+                            За <span className={style.highlightedText}>50 хв</span> ти отримаєш:
                         </p>
                         <ul className={style.benefits}>
                             <li className={style.benefit}>
@@ -52,9 +52,6 @@ const TrialLesson = () => {
                             </li>
                             <li className={style.benefit}>
                                 Відповіді на всі ваші запитання
-                            </li>
-                            <li className={style.benefit}>
-                                2 - 4 вправи на англійській мові
                             </li>
                             <li className={style.benefit}>
                                 Домашнє завдання
