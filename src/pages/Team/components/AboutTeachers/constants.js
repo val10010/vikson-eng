@@ -40,5 +40,11 @@ export const LIST = [
         name: 'Аніта',
         skils: ['General, Fashion, Art, Test preparation', 'A2-B2', 'Kids, Teens, Adults'],
         price: '400 грн.'
+    },
+    {
+        img: '../../images/team/aboutTeachers/10.jpg',
+        name: 'Даша',
+        skils: ['General English', 'Adults', 'Elementary', 'Pre, Intermediate, Advanced'],
+        price: '750 грн.'
     }
 ];
