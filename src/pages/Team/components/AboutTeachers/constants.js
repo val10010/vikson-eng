@@ -1,11 +1,5 @@
 export const LIST = [
     {
-        img: '../../images/team/aboutTeachers/0.jpg',
-        name: 'Марго',
-        skils: ['General English', 'Adults', 'A1-B2'],
-        price: '400 грн.'
-    },
-    {
         img: '../../images/team/aboutTeachers/1.jpg',
         name: 'Ксенія',
         skils: ['General English, ЗНО (НМТ), Adults, Teens', 'A1-B2'],
@@ -24,21 +18,9 @@ export const LIST = [
         price: '400 грн.'
     },
     {
-        img: '../../images/team/aboutTeachers/7.jpg',
-        name: 'Аліна',
-        skils: ['General English', 'Adults', 'A1-B2'],
-        price: '500 грн.'
-    },
-    {
-        img: '../../images/team/aboutTeachers/8.jpg',
-        name: 'Оксана',
-        skils: ['General English', 'A1-B2', 'Cambridge qualified'],
-        price: '550 грн.'
-    },
-    {
         img: '../../images/team/aboutTeachers/9.jpg',
         name: 'Аніта',
-        skils: ['General, Fashion, Art, Test preparation', 'A2-B2', 'Kids, Teens, Adults'],
+        skils: ['General, Fashion, Art, Test preparation', 'A2-B2', 'Teens, Adults'],
         price: '400 грн.'
     },
     {
@@ -70,6 +52,18 @@ export const LIST = [
         name: 'Валерія',
         skils: ['General English', 'Adults', 'A1-B2'],
         price: '400 грн.'
+    },
+    {
+        img: '../../images/team/aboutTeachers/15.jpg',
+        name: 'Анастасія',
+        skils: ['General English, IT', 'Teens, Adults', 'A1-B1'],
+        price: '500 грн.'
+    },
+    {
+        img: '../../images/team/aboutTeachers/16.jpg',
+        name: 'Ірина',
+        skils: ['General English', 'Business, IT', 'School Age, Adults'],
+        price: '500 грн.'
     }
 
 ];
