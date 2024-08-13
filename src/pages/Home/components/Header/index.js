@@ -32,7 +32,7 @@ const Header = () => {
     return (
         <header className={style.header}>
             <Menu isShowPlanBtn={true}>
-                <Link to='/for-teachers'>Викладачам</Link>
+                <Link to='/for-teachers'>Для викладачів</Link>
                 <Link to='/team'>Команда</Link>
                 <Link to='/vacancies'>Вакансії</Link>
             </Menu>

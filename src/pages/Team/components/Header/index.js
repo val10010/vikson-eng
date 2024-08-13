@@ -9,7 +9,7 @@ const Header = () => {
         <header className={style.header}>
             <Menu>
                 <Link to='/'>Головна</Link>
-                <Link to='/for-teachers'>Викладачам</Link>
+                <Link to='/for-teachers'>Для викладачів</Link>
                 <Link to='/vacancies'>Вакансії</Link>
             </Menu>
         </header>
